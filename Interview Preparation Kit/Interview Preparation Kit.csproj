@@ -47,7 +47,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Interview_Preparation_Kit.Arrays.Arrays_Left_Rotation.Solution</StartupObject>
+    <StartupObject>Interview_Preparation_Kit.Arrays.Array_Manipulation.Solution</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -61,7 +61,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Arrays\2D Array - DS\Solution.cs" />
+    <Compile Include="Arrays\Array Manipulation\Solution.cs" />
     <Compile Include="Arrays\Arrays Left Rotation\Solution.cs" />
+    <Compile Include="Arrays\Minimum Swaps 2\Solution.cs" />
+    <Compile Include="Arrays\New Year Chaos\Solution.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

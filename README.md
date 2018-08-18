@@ -33,4 +33,22 @@
 <td align="center">20</td>
 <td align="center"><a href="https://github.com/bruno-de-andrade/hackerrank-solutions/blob/master/Interview%20Preparation%20Kit/Arrays/Arrays%20Left%20Rotation/Solution.cs">Solution.cs</a></td>
 </tr>
+<tr>
+<td align="center">Arrays</td>
+<td align="center"><a href="https://www.hackerrank.com/challenges/minimum-swaps-2/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=arrays">Minimum Swaps 2</a></td>
+<td align="center">40</td>
+<td align="center"><a href="https://github.com/bruno-de-andrade/hackerrank-solutions/blob/master/Interview%20Preparation%20Kit/Arrays/Minimum%20Swaps%202/Solution.cs">Solution.cs</a></td>
+</tr> 
+<tr>
+<td align="center">Arrays</td>
+<td align="center"><a href="https://www.hackerrank.com/challenges/new-year-chaos/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=arrays">New Year Chaos</a></td>
+<td align="center">40</td>
+<td align="center"><a href="https://github.com/bruno-de-andrade/hackerrank-solutions/blob/master/Interview%20Preparation%20Kit/Arrays/New%20Year%20Chaos/Solution.cs">Solution.cs</a></td>
+</tr> 
+<tr>
+<td align="center">Arrays</td>
+<td align="center"><a href="https://www.hackerrank.com/challenges/crush/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=arrays">Array Manipulation</a></td>
+<td align="center">60</td>
+<td align="center"><a href="https://github.com/bruno-de-andrade/hackerrank-solutions/blob/master/Interview%20Preparation%20Kit/Arrays/Array%20Manipulation/Solution.cs">Solution.cs</a></td>
+</tr>
 </tbody></table>

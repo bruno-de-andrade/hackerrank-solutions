@@ -47,7 +47,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Interview_Preparation_Kit.Arrays.Array_Manipulation.Solution</StartupObject>
+    <StartupObject>Interview_Preparation_Kit.Dictionaries_and_Hashmaps.Sherlock_and_Anagrams.Solution</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -65,6 +65,9 @@
     <Compile Include="Arrays\Arrays Left Rotation\Solution.cs" />
     <Compile Include="Arrays\Minimum Swaps 2\Solution.cs" />
     <Compile Include="Arrays\New Year Chaos\Solution.cs" />
+    <Compile Include="Dictionaries and Hashmaps\Hash Tables Ransom Note\Solution.cs" />
+    <Compile Include="Dictionaries and Hashmaps\Sherlock and Anagrams\Solution.cs" />
+    <Compile Include="Dictionaries and Hashmaps\Two Strings\Solution.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

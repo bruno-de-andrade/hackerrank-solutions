@@ -1,16 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Interview_Preparation_Kit.Arrays.Minimum_Swaps_2
 {
-    class Solution
+    internal class Solution
     {
-        // Complete the minimumSwaps function below.
-        static int minimumSwaps(int[] arr)
+        private static int minimumSwaps(int[] arr)
         {
             int swaps = 0;
 
@@ -18,7 +13,7 @@ namespace Interview_Preparation_Kit.Arrays.Minimum_Swaps_2
             {
                 if (arr[index] != (index + 1))
                 {
-                    for (int swapIndex = index+1; swapIndex < arr.Length; swapIndex++)
+                    for (int swapIndex = index + 1; swapIndex < arr.Length; swapIndex++)
                     {
                         if (arr[swapIndex] == (index + 1))
                         {
@@ -35,7 +30,7 @@ namespace Interview_Preparation_Kit.Arrays.Minimum_Swaps_2
             return swaps;
         }
 
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             int n = Convert.ToInt32(Console.ReadLine());
 

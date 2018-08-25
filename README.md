@@ -1,5 +1,3 @@
-# hackerrank-solutions
-
 <p align="center">
     <a href="https://www.hackerrank.com/brunodeandrade">
         <img height="85" src="https://hrcdn.net/hackerrank/assets/brand/hr_logo_new_word-4acac9b8a6a3c53b6ff4ab2a51fdfef4.png" style="max-width:100%;">

@@ -39,9 +39,9 @@ namespace Interview_Preparation_Kit.Dictionaries_and_Hashmaps.Two_Strings
 
                 string result = twoStrings(s1, s2);
 
-                Console.WriteLine(result);
-
                 watch.Stop();
+
+                Console.WriteLine(result);
 
                 Console.WriteLine(string.Format("Elapsed time: {0} seconds", watch.Elapsed.TotalSeconds));
 

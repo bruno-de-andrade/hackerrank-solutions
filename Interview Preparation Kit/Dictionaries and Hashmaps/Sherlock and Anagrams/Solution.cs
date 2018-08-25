@@ -46,9 +46,9 @@ namespace Interview_Preparation_Kit.Dictionaries_and_Hashmaps.Sherlock_and_Anagr
 
                 int result = sherlockAndAnagrams(s);
 
-                Console.WriteLine(result);
-
                 watch.Stop();
+
+                Console.WriteLine(result);
 
                 Console.WriteLine(string.Format("Elapsed time: {0} seconds", watch.Elapsed.TotalSeconds));
             }

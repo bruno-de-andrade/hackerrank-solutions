@@ -47,7 +47,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Interview_Preparation_Kit.Sorting.Fraudulent_Activity_Notifications.Solution</StartupObject>
+    <StartupObject>Interview_Preparation_Kit.Warm_up_Challenges.Repeated_String.Solution</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -76,6 +76,15 @@
     <Compile Include="Sorting\Merge Sort Counting Inversions\Solution.cs" />
     <Compile Include="Sorting\Sorting Bubble Sort\Solution.cs" />
     <Compile Include="Sorting\Sorting Comparator\Solution.cs" />
+    <Compile Include="String Manipulation\Alternating Characters\Solution.cs" />
+    <Compile Include="String Manipulation\Common Child\Solution.cs" />
+    <Compile Include="String Manipulation\Sherlock and the Valid String\Solution.cs" />
+    <Compile Include="String Manipulation\Special Palindrome Again\Solution.cs" />
+    <Compile Include="String Manipulation\Strings Making Anagrams\Solution.cs" />
+    <Compile Include="Warm-up Challenges\Counting Valleys\Solution.cs" />
+    <Compile Include="Warm-up Challenges\Jumping on the Clouds\Solution.cs" />
+    <Compile Include="Warm-up Challenges\Repeated String\Solution.cs" />
+    <Compile Include="Warm-up Challenges\Sock Merchant\Solution.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -88,5 +88,40 @@
             <td align="center">35</td>
             <td align="center"><a href="https://github.com/bruno-de-andrade/hackerrank-solutions/blob/master/Interview%20Preparation%20Kit/Dictionaries%20and%20Hashmaps/Count%20Triplets/Solution.cs">Solution.cs</a></td>
         </tr>
+        <tr>
+            <td align="center">Sorting</td>
+            <td align="center"><a href="https://www.hackerrank.com/challenges/ctci-bubble-sort/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=sorting">
+                Sorting: Bubble Sort</a></td>
+            <td align="center">30</td>
+            <td align="center"><a href="https://github.com/bruno-de-andrade/hackerrank-solutions/blob/master/Interview%20Preparation%20Kit/Sorting/Sorting%20Bubble%20Sort/Solution.cs">Solution.cs</a></td>
+        </tr>
+        <tr>
+            <td align="center">Sorting</td>
+            <td align="center"><a href="https://www.hackerrank.com/challenges/mark-and-toys?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=sorting">
+                Mark and Toys</a></td>
+            <td align="center">35</td>
+            <td align="center"><a href="https://github.com/bruno-de-andrade/hackerrank-solutions/blob/master/Interview%20Preparation%20Kit/Sorting/Mark%20and%20Toys/Solution.cs">Solution.cs</a></td>
+        </tr>
+        <tr>
+            <td align="center">Sorting</td>
+            <td align="center"><a href="https://www.hackerrank.com/challenges/ctci-comparator-sorting?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=sorting">
+                Sorting: Comparator</a></td>
+            <td align="center">35</td>
+            <td align="center"><a href="https://github.com/bruno-de-andrade/hackerrank-solutions/blob/master/Interview%20Preparation%20Kit/Sorting/Sorting%20Comparator/Solution.cs">Solution.cs</a></td>
+        </tr>
+        <tr>
+            <td align="center">Sorting</td>
+            <td align="center"><a href="https://www.hackerrank.com/challenges/fraudulent-activity-notifications?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=sorting">
+                Fraudulent Activity Notifications</a></td>
+            <td align="center">40</td>
+            <td align="center"><a href="https://github.com/bruno-de-andrade/hackerrank-solutions/blob/master/Interview%20Preparation%20Kit/Sorting/Fraudulent%20Activity%20Notifications/Solution.cs">Solution.cs</a></td>
+        </tr>
+        <tr>
+            <td align="center">Sorting</td>
+            <td align="center"><a href="https://www.hackerrank.com/challenges/ctci-merge-sort?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=sorting">
+                Merge Sort: Counting Inversions</a></td>
+            <td align="center">45</td>
+            <td align="center"><a href="https://github.com/bruno-de-andrade/hackerrank-solutions/blob/master/Interview%20Preparation%20Kit/Sorting/Merge%20Sort%20Counting%20Inversions/Solution.cs">Solution.cs</a></td>
+        </tr>
     </tbody>
 </table>

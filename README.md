@@ -20,6 +20,30 @@
     </thead>
     <tbody>
         <tr>
+            <td align="center">Warm-up Challenges</td>
+            <td align="center"><a href="https://www.hackerrank.com/challenges/sock-merchant/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=warmup">Sock Merchant</a></td>
+            <td align="center">10</td>
+            <td align="center"><a href="https://github.com/bruno-de-andrade/hackerrank-solutions/blob/master/Interview%20Preparation%20Kit/Warm-up%20Challenges/Sock%20Merchant/Solution.cs">Solution.cs</a></td>
+        </tr>
+        <tr>
+            <td align="center">Warm-up Challenges</td>
+            <td align="center"><a href="https://www.hackerrank.com/challenges/counting-valleys/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=warmup">Counting Valleys</a></td>
+            <td align="center">15</td>
+            <td align="center"><a href="https://github.com/bruno-de-andrade/hackerrank-solutions/tree/master/Interview%20Preparation%20Kit/Warm-up%20Challenges/Counting%20Valleys">Solution.cs</a></td>
+        </tr>
+        <tr>
+            <td align="center">Warm-up Challenges</td>
+            <td align="center"><a href="https://www.hackerrank.com/challenges/jumping-on-the-clouds/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=warmup">Jumping on the Clouds</a></td>
+            <td align="center">20</td>
+            <td align="center"><a href="https://github.com/bruno-de-andrade/hackerrank-solutions/blob/master/Interview%20Preparation%20Kit/Warm-up%20Challenges/Jumping%20on%20the%20Clouds/Solution.cs">Solution.cs</a></td>
+        </tr>
+        <tr>
+            <td align="center">Warm-up Challenges</td>
+            <td align="center"><a href="https://www.hackerrank.com/challenges/repeated-string/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=warmup">Repeated String</a></td>
+            <td align="center">20</td>
+            <td align="center"><a href="https://github.com/bruno-de-andrade/hackerrank-solutions/blob/master/Interview%20Preparation%20Kit/Warm-up%20Challenges/Repeated%20String/Solution.cs">Solution.cs</a></td>
+        </tr>
+        <tr>
             <td align="center">Arrays</td>
             <td align="center"><a href="https://www.hackerrank.com/challenges/2d-array/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=arrays">2D
                     Array - DS</a></td>

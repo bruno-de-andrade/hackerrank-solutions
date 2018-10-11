@@ -1,9 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace Interview_Preparation_Kit.Greedy_Algorithms
+namespace Interview_Preparation_Kit.Greedy_Algorithms.Luck_Balance
 {
-    internal class Luck_Balance
+    class Solution
     {
         // Complete the luckBalance function below.
         private static int luckBalance(int k, int[][] contests)
@@ -68,12 +72,6 @@ namespace Interview_Preparation_Kit.Greedy_Algorithms
             Console.WriteLine(string.Format("Elapsed time: {0} seconds", watch.Elapsed.TotalSeconds));
 
             Console.ReadKey();
-
-            Console.WriteLine(result);
-
-            
-
-            
         }
     }
 }

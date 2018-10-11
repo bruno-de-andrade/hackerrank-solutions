@@ -47,7 +47,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Interview_Preparation_Kit.Greedy_Algorithms.Luck_Balance</StartupObject>
+    <StartupObject>Interview_Preparation_Kit.Greedy_Algorithms.Minimum_Absolute_Difference_in_an_Array.Solution</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -70,7 +70,9 @@
     <Compile Include="Dictionaries and Hashmaps\Hash Tables Ransom Note\Solution.cs" />
     <Compile Include="Dictionaries and Hashmaps\Sherlock and Anagrams\Solution.cs" />
     <Compile Include="Dictionaries and Hashmaps\Two Strings\Solution.cs" />
-    <Compile Include="Greedy Algorithms\Luck Balance.cs" />
+    <Compile Include="Greedy Algorithms\Greedy Florist\Solution.cs" />
+    <Compile Include="Greedy Algorithms\Luck Balance\Solution.cs" />
+    <Compile Include="Greedy Algorithms\Minimum Absolute Difference in an Array\Solution.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sorting\Fraudulent Activity Notifications\Solution.cs" />
     <Compile Include="Sorting\Mark and Toys\Solution.cs" />

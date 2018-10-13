@@ -47,7 +47,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Interview_Preparation_Kit.Greedy_Algorithms.Minimum_Absolute_Difference_in_an_Array.Solution</StartupObject>
+    <StartupObject>Interview_Preparation_Kit.Greedy_Algorithms.Reverse_Shuffle_Merge.Solution</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -72,7 +72,9 @@
     <Compile Include="Dictionaries and Hashmaps\Two Strings\Solution.cs" />
     <Compile Include="Greedy Algorithms\Greedy Florist\Solution.cs" />
     <Compile Include="Greedy Algorithms\Luck Balance\Solution.cs" />
+    <Compile Include="Greedy Algorithms\Max Min\Solution.cs" />
     <Compile Include="Greedy Algorithms\Minimum Absolute Difference in an Array\Solution.cs" />
+    <Compile Include="Greedy Algorithms\Reverse Shuffle Merge\Solution.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sorting\Fraudulent Activity Notifications\Solution.cs" />
     <Compile Include="Sorting\Mark and Toys\Solution.cs" />

@@ -70,6 +70,7 @@
     <Compile Include="Dictionaries and Hashmaps\Hash Tables Ransom Note\Solution.cs" />
     <Compile Include="Dictionaries and Hashmaps\Sherlock and Anagrams\Solution.cs" />
     <Compile Include="Dictionaries and Hashmaps\Two Strings\Solution.cs" />
+    <Compile Include="Dynamic Programming\Max Array Sum\Solution.cs" />
     <Compile Include="Greedy Algorithms\Greedy Florist\Solution.cs" />
     <Compile Include="Greedy Algorithms\Luck Balance\Solution.cs" />
     <Compile Include="Greedy Algorithms\Max Min\Solution.cs" />

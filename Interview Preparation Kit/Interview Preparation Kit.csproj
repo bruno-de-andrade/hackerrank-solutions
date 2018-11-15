@@ -80,6 +80,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Search\Hash Tables Ice Cream Parlor\Solution.cs" />
     <Compile Include="Search\Pairs\Solution.cs" />
+    <Compile Include="Search\Triple Sum\Solution.cs" />
     <Compile Include="Sorting\Fraudulent Activity Notifications\Solution.cs" />
     <Compile Include="Sorting\Mark and Toys\Solution.cs" />
     <Compile Include="Sorting\Merge Sort Counting Inversions\Solution.cs" />
@@ -111,6 +112,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Miscellaneous\Flipping bits\Solution.js" />
     <Content Include="Search\Hash Tables Ice Cream Parlor\testCase1.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

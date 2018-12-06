@@ -47,7 +47,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Interview_Preparation_Kit.Search.Hash_Tables_Ice_Cream_Parlor.Solution</StartupObject>
+    <StartupObject>Interview_Preparation_Kit.Search.Minimum_Time_Required.Solution</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -79,6 +79,7 @@
     <Compile Include="Greedy Algorithms\Reverse Shuffle Merge\Solution.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Search\Hash Tables Ice Cream Parlor\Solution.cs" />
+    <Compile Include="Search\Minimum Time Required\Solution.cs" />
     <Compile Include="Search\Pairs\Solution.cs" />
     <Compile Include="Search\Triple Sum\Solution.cs" />
     <Compile Include="Sorting\Fraudulent Activity Notifications\Solution.cs" />

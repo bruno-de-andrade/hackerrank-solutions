@@ -1,12 +1,12 @@
 <p align="center">
-    <a href="https://www.hackerrank.com/brunodeandrade">
+    <a href="https://www.hackerrank.com/brunodeandrade" target="_blank">
         <img height="85" src="https://hrcdn.net/hackerrank/assets/brand/hr_logo_new_word-4acac9b8a6a3c53b6ff4ab2a51fdfef4.png" style="max-width:100%;">
     </a>
     <br>Solutions to HackerRank problems
-    <p>HackerRank profile: <a href="https://www.hackerrank.com/brunodeandrade">https://www.hackerrank.com/brunodeandrade</a></p>
+    <p>HackerRank profile: <a href="https://www.hackerrank.com/brunodeandrade" target="_blank">https://www.hackerrank.com/brunodeandrade</a></p>
   </p>
   
-  <p>Solutions coded in C#</p>
+  <p>Solutions coded in C# and JavaScript</p>
   
   <h1>Interview Preparation Kit</h1>
   
@@ -38,6 +38,13 @@
   | String Manipulation | [Strings: Making Anagrams](https://www.hackerrank.com/challenges/ctci-making-anagrams/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=strings) | 25 | [Solution.cs](Interview%20Preparation%20Kit/String%20Manipulation/Strings%20Making%20Anagrams/Solution.cs) |
   | Greedy Algorithms | [Minimum Absolute Difference in an Array](https://www.hackerrank.com/challenges/minimum-absolute-difference-in-an-array/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=greedy-algorithms) | 15 | [Solution.cs](Interview%20Preparation%20Kit/Greedy%20Algorithms/Minimum%20Absolute%20Difference%20in%20an%20Array/Solution.cs) |
   | Greedy Algorithms | [Luck Balance](https://www.hackerrank.com/challenges/luck-balance/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=greedy-algorithms) | 20 | [Solution.cs](Interview%20Preparation%20Kit/Greedy%20Algorithms/Luck%20Balance/Solution.cs) |
-  | Greedy Algorithms | [Greedy Florist](https://www.hackerrank.com/challenges/greedy-florist/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=greedy-algorithms) | 35 | [Solution.cs](Interview%20Preparation%20Kit/Greedy%20Algorithms/Greedy%20Florist/Solution.cs)
-  
-  
+  | Greedy Algorithms | [Greedy Florist](https://www.hackerrank.com/challenges/greedy-florist/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=greedy-algorithms) | 35 | [Solution.cs](Interview%20Preparation%20Kit/Greedy%20Algorithms/Greedy%20Florist/Solution.cs) |
+  | Greedy Algorithms | [Max Min](https://www.hackerrank.com/challenges/angry-children/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=greedy-algorithms) | 35 | [Solution.cs](Interview%20Preparation%20Kit/Greedy%20Algorithms/Max%20Min/Solution.cs) |
+  | Greedy Algorithms | [Reverse Shuffle Merge](https://www.hackerrank.com/challenges/reverse-shuffle-merge/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=greedy-algorithms) | 50 | [Solution.cs](Interview%20Preparation%20Kit/Greedy%20Algorithms/Reverse%20Shuffle%20Merge/Solution.cs) |
+  | Search | [Hash Tables: Ice Cream Parlor](https://www.hackerrank.com/challenges/ctci-ice-cream-parlor/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=search) | 35 | [Solution.cs](Interview%20Preparation%20Kit/Search/Hash%20Tables%20Ice%20Cream%20Parlor/Solution.cs) |
+  | Search | [Pairs](https://www.hackerrank.com/challenges/pairs/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=search) | 50 | [Solution.cs](Interview%20Preparation%20Kit/Search/Pairs/Solution.cs) |
+  | Search | [Triple sum](https://www.hackerrank.com/challenges/triple-sum/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=search) | 40 | [Solution.cs](Interview%20Preparation%20Kit/Search/Triple%20Sum/Solution.cs) |
+  | Search | [Minimum Time Required](https://www.hackerrank.com/challenges/minimum-time-required/submissions?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=search) | 35 | [Solution.cs](Interview%20Preparation%20Kit/Search/Minimum%20Time%20Required/Solution.cs) |
+  | Dynamic Programming | [Max Array Sum](https://www.hackerrank.com/challenges/max-array-sum/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=dynamic-programming) | 20 | [Solution.cs](Interview%20Preparation%20Kit/Dynamic%20Programming/Max%20Array%20Sum/Solution.cs) |
+  | Dynamic Programming | [Candies](https://www.hackerrank.com/challenges/candies/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=dynamic-programming) | 50 | [Solution.cs](Interview%20Preparation%20Kit/Dynamic%20Programming/Candies/Solution.cs) |
+  | Miscellaneous | [Flipping bits](https://www.hackerrank.com/challenges/flipping-bits/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=miscellaneous) | 40 | [Solution.js](Interview%20Preparation%20Kit/Miscellaneous/Flipping%20bits/Solution.js) |

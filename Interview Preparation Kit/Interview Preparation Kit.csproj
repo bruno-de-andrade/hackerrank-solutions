@@ -47,7 +47,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Interview_Preparation_Kit.Search.Minimum_Time_Required.Solution</StartupObject>
+    <StartupObject>Interview_Preparation_Kit.Dynamic_Programming.Abbreviation.Solution</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -70,6 +70,7 @@
     <Compile Include="Dictionaries and Hashmaps\Hash Tables Ransom Note\Solution.cs" />
     <Compile Include="Dictionaries and Hashmaps\Sherlock and Anagrams\Solution.cs" />
     <Compile Include="Dictionaries and Hashmaps\Two Strings\Solution.cs" />
+    <Compile Include="Dynamic Programming\Abbreviation\Solution.cs" />
     <Compile Include="Dynamic Programming\Candies\Solution.cs" />
     <Compile Include="Dynamic Programming\Max Array Sum\Solution.cs" />
     <Compile Include="Greedy Algorithms\Greedy Florist\Solution.cs" />
@@ -113,6 +114,9 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Dynamic Programming\Abbreviation\testCase1.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Miscellaneous\Flipping bits\Solution.js" />
     <Content Include="Search\Hash Tables Ice Cream Parlor\testCase1.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

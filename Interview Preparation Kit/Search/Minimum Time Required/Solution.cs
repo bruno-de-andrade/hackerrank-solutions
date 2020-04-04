@@ -5,13 +5,12 @@ namespace Interview_Preparation_Kit.Search.Minimum_Time_Required
 {
     internal class Solution
     {
-        // Complete the minTime function below.
         private static long minTime(long[] machines, long goal)
         {
             long currentTotalDays = 0,
                  currentProduction = 0,
-                 lastTotalDays = 0,
-                 lastProduction = 0;
+                 lastTotalDays,
+                 lastProduction;
 
             //Calculate the maximum days of production possible 
             long currentDaysSearch = getLongestProductionTime(machines) * goal / (machines.Length > goal ? goal : machines.Length);

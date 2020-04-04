@@ -4,11 +4,10 @@ namespace Interview_Preparation_Kit.Search.Pairs
 {
     internal class Solution
     {
-        // Complete the pairs function below.
         private static int pairs(int k, int[] arr)
         {
             int pairsCount = 0,
-                difference = 0;
+                difference;
 
             Array.Sort(arr);
 

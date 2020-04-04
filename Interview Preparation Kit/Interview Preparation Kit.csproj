@@ -8,7 +8,7 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>Interview_Preparation_Kit</RootNamespace>
     <AssemblyName>Interview Preparation Kit</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <PublishUrl>publish\</PublishUrl>
@@ -26,6 +26,7 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -47,7 +48,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Interview_Preparation_Kit.Dynamic_Programming.Abbreviation.Solution</StartupObject>
+    <StartupObject>Interview_Preparation_Kit.Trees.Tree_Height_of_a_Binary_Tree.Solution</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -72,16 +73,21 @@
     <Compile Include="Dictionaries and Hashmaps\Two Strings\Solution.cs" />
     <Compile Include="Dynamic Programming\Abbreviation\Solution.cs" />
     <Compile Include="Dynamic Programming\Candies\Solution.cs" />
+    <Compile Include="Dynamic Programming\Decibinary Numbers\Solution.cs" />
     <Compile Include="Dynamic Programming\Max Array Sum\Solution.cs" />
     <Compile Include="Greedy Algorithms\Greedy Florist\Solution.cs" />
     <Compile Include="Greedy Algorithms\Luck Balance\Solution.cs" />
     <Compile Include="Greedy Algorithms\Max Min\Solution.cs" />
     <Compile Include="Greedy Algorithms\Minimum Absolute Difference in an Array\Solution.cs" />
     <Compile Include="Greedy Algorithms\Reverse Shuffle Merge\Solution.cs" />
+    <Compile Include="Linked Lists\Insert a node at a specific position in a linked list\Solution.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Search\Hash Tables Ice Cream Parlor\Solution.cs" />
     <Compile Include="Search\Minimum Time Required\Solution.cs" />
     <Compile Include="Search\Pairs\Solution.cs" />
+    <Compile Include="Recursion and Backtracking\Recursion Fibonacci Numbers\Solution.cs" />
+    <Compile Include="Recursion and Backtracking\Recursion Fibonacci Numbers\SolutionTabulation.cs" />
+    <Compile Include="Recursion and Backtracking\Recursion Fibonacci Numbers\SolutionMemoization.cs" />
     <Compile Include="Search\Triple Sum\Solution.cs" />
     <Compile Include="Sorting\Fraudulent Activity Notifications\Solution.cs" />
     <Compile Include="Sorting\Mark and Toys\Solution.cs" />
@@ -93,6 +99,7 @@
     <Compile Include="String Manipulation\Sherlock and the Valid String\Solution.cs" />
     <Compile Include="String Manipulation\Special Palindrome Again\Solution.cs" />
     <Compile Include="String Manipulation\Strings Making Anagrams\Solution.cs" />
+    <Compile Include="Trees\Tree Height of a Binary Tree\Solution.cs" />
     <Compile Include="Warm-up Challenges\Counting Valleys\Solution.cs" />
     <Compile Include="Warm-up Challenges\Jumping on the Clouds\Solution.cs" />
     <Compile Include="Warm-up Challenges\Repeated String\Solution.cs" />

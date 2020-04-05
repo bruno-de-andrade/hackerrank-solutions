@@ -48,7 +48,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Interview_Preparation_Kit.Trees.Tree_Height_of_a_Binary_Tree.Solution</StartupObject>
+    <StartupObject>Interview_Preparation_Kit.Linked_Lists.Inserting_a_Node_Into_a_Sorted_Doubly_Linked_List.Solution</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -81,6 +81,7 @@
     <Compile Include="Greedy Algorithms\Minimum Absolute Difference in an Array\Solution.cs" />
     <Compile Include="Greedy Algorithms\Reverse Shuffle Merge\Solution.cs" />
     <Compile Include="Linked Lists\Insert a node at a specific position in a linked list\Solution.cs" />
+    <Compile Include="Linked Lists\Inserting a Node Into a Sorted Doubly Linked List\Solution.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Search\Hash Tables Ice Cream Parlor\Solution.cs" />
     <Compile Include="Search\Minimum Time Required\Solution.cs" />

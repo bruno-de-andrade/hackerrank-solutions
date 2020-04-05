@@ -48,7 +48,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Interview_Preparation_Kit.Linked_Lists.Inserting_a_Node_Into_a_Sorted_Doubly_Linked_List.Solution</StartupObject>
+    <StartupObject>Interview_Preparation_Kit.Linked_Lists.Find_Merge_Point_of_Two_Lists.Solution</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -80,8 +80,11 @@
     <Compile Include="Greedy Algorithms\Max Min\Solution.cs" />
     <Compile Include="Greedy Algorithms\Minimum Absolute Difference in an Array\Solution.cs" />
     <Compile Include="Greedy Algorithms\Reverse Shuffle Merge\Solution.cs" />
+    <Compile Include="Linked Lists\Find Merge Point of Two Lists\Solution.cs" />
     <Compile Include="Linked Lists\Insert a node at a specific position in a linked list\Solution.cs" />
     <Compile Include="Linked Lists\Inserting a Node Into a Sorted Doubly Linked List\Solution.cs" />
+    <Compile Include="Linked Lists\Linked Lists Detect a Cycle\Solution.cs" />
+    <Compile Include="Linked Lists\Reverse a doubly linked list\Solution.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Search\Hash Tables Ice Cream Parlor\Solution.cs" />
     <Compile Include="Search\Minimum Time Required\Solution.cs" />
@@ -125,6 +128,10 @@
     <Content Include="Dynamic Programming\Abbreviation\testCase1.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Linked Lists\Find Merge Point of Two Lists\testCase1.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Linked Lists\Linked Lists Detect a Cycle\Solution.java.txt" />
     <Content Include="Miscellaneous\Flipping bits\Solution.js" />
     <Content Include="Search\Hash Tables Ice Cream Parlor\testCase1.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

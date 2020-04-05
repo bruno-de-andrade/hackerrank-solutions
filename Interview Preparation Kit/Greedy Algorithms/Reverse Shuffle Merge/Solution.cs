@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Interview_Preparation_Kit.Greedy_Algorithms.Reverse_Shuffle_Merge
 {

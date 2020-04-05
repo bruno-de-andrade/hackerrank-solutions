@@ -1,0 +1,16 @@
+﻿boolean hasCycle(Node head) {
+    Set<Node> visitedNodes = new HashSet<>();
+    Node currentNode = head;
+
+    while(currentNode != null) {
+        // Node was visited previously, cycle exists.
+        if(visitedNodes.contains(currentNode)) {
+            return true;
+        }
+        
+        visitedNodes.add(currentNode);
+        currentNode = currentNode.next;
+    }
+    
+    return false;
+}

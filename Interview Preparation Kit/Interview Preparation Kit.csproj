@@ -48,11 +48,30 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Interview_Preparation_Kit.Recursion_and_Backtracking.Crossword_Puzzle.Solution</StartupObject>
+    <StartupObject>Interview_Preparation_Kit.Dynamic_Programming.Decibinary_Numbers.Solution2</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.2.0.0\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="MiniProfiler, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b44f9351044011a3, processorArchitecture=MSIL">
+      <HintPath>..\packages\MiniProfiler.4.1.0\lib\net461\MiniProfiler.dll</HintPath>
+    </Reference>
+    <Reference Include="MiniProfiler.Shared, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b44f9351044011a3, processorArchitecture=MSIL">
+      <HintPath>..\packages\MiniProfiler.Shared.4.1.0\lib\net461\MiniProfiler.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.2.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.4.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -85,15 +104,18 @@
     <Compile Include="Linked Lists\Inserting a Node Into a Sorted Doubly Linked List\Solution.cs" />
     <Compile Include="Linked Lists\Linked Lists Detect a Cycle\Solution.cs" />
     <Compile Include="Linked Lists\Reverse a doubly linked list\Solution.cs" />
+    <Compile Include="Miscellaneous\Time Complexity Primality\Solution.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Recursion and Backtracking\Crossword Puzzle\Solution.cs" />
     <Compile Include="Recursion and Backtracking\Recursion Davis Staircase\Solution.cs" />
+    <Compile Include="Recursion and Backtracking\Recursive Digit Sum\Solution.cs" />
     <Compile Include="Search\Hash Tables Ice Cream Parlor\Solution.cs" />
     <Compile Include="Search\Minimum Time Required\Solution.cs" />
     <Compile Include="Search\Pairs\Solution.cs" />
     <Compile Include="Recursion and Backtracking\Recursion Fibonacci Numbers\Solution.cs" />
     <Compile Include="Recursion and Backtracking\Recursion Fibonacci Numbers\SolutionTabulation.cs" />
     <Compile Include="Recursion and Backtracking\Recursion Fibonacci Numbers\SolutionMemoization.cs" />
+    <Compile Include="Search\Swap Nodes [Algo]\Solution.cs" />
     <Compile Include="Search\Triple Sum\Solution.cs" />
     <Compile Include="Sorting\Fraudulent Activity Notifications\Solution.cs" />
     <Compile Include="Sorting\Mark and Toys\Solution.cs" />
@@ -113,6 +135,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
@@ -130,6 +153,24 @@
     <Content Include="Dynamic Programming\Abbreviation\testCase1.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Dynamic Programming\Decibinary Numbers\testCase1.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Dynamic Programming\Decibinary Numbers\testCase2.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Dynamic Programming\Decibinary Numbers\testCase5.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Dynamic Programming\Decibinary Numbers\testCase6.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Dynamic Programming\Decibinary Numbers\testCase7.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Dynamic Programming\Decibinary Numbers\testCase8.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Linked Lists\Find Merge Point of Two Lists\testCase1.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -141,9 +182,16 @@
     <Content Include="Recursion and Backtracking\Recursion Davis Staircase\testCase1.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Recursion and Backtracking\Recursive Digit Sum\testCase1.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Search\Hash Tables Ice Cream Parlor\testCase1.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Search\Swap Nodes [Algo]\testCase1.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

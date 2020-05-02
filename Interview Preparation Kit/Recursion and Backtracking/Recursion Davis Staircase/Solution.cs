@@ -51,6 +51,8 @@ namespace Interview_Preparation_Kit.Recursion_and_Backtracking.Recursion_Davis_S
                 Console.WriteLine(res);
             }
 
+            watch.Stop();
+
             Console.WriteLine(string.Format("Elapsed time: {0} seconds", watch.Elapsed.TotalSeconds));
 
             file.Close();

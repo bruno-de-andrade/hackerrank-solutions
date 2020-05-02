@@ -1,72 +1,210 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Interview_Preparation_Kit.Dynamic_Programming.Decibinary_Numbers
 {
     class Solution
     {
-        static Dictionary<long, int> dic = new Dictionary<long, int>();
+        const int MaxNumberOfDigits = 20;
 
-        static long decibinaryToDecimal(string decibinary)
+        static readonly int[] maxValueForDigit = new int[MaxNumberOfDigits];
+        static readonly List<long[]> numberOfCopiesForDigit = new List<long[]>();
+        static readonly List<long> startPositionOffset = new List<long>();
+        static readonly Dictionary<long, long> results = new Dictionary<long, long>(); // Position, Decibinary
+        static int numberToCompute = 0;
+        static long currentPosition = 0;
+
+        static void initialize()
         {
-            long decimalNumber = 0;
+            // Calculate maximum possible value for each digit
+            int maxValue = 0;
 
-            for (int i = 0; i < decibinary.Length; i++)
+            for (int i = 1; i <= MaxNumberOfDigits; i++)
             {
-                decimalNumber += (long)(char.GetNumericValue(decibinary[i]) * Math.Pow(2, decibinary.Length - i - 1));
+                maxValue += 9 * (1 << i - 1); //Power i at base 2
+
+                maxValueForDigit[i - 1] = maxValue;
             }
-
-            dic.TryGetValue(decimalNumber, out int numberOfTimes);
-            dic[decimalNumber] = numberOfTimes + 1;
-
-            return decimalNumber;
         }
 
-        static int calcNumberTimesNumber(int number)
+        static long decibinaryNumbers(long nthPosition)
         {
-            int min = 0, max = 0;
+            // As last decimal surpassed the position we are looking for, check all posibilities for last number
+            int currentDecimal = calculateNumberOfDuplicatesUpToPosition(nthPosition);
+            currentPosition = startPositionOffset[currentDecimal];
 
-            return 0;
+            // Gets maximum number of digits the decimal can be represented in decibinary
+            int maxDigits = getMaximumDigitsForDecimal(currentDecimal);
+            int digits;
+
+            for (digits = 1; digits <= maxDigits; digits++)
+            {
+                if (currentPosition + numberOfCopiesForDigit[currentDecimal][digits - 1] >= nthPosition)
+                {
+                    currentPosition += numberOfCopiesForDigit[currentDecimal][digits - 2 > 0 ? digits - 2 : 0];
+                    break;
+                }
+            }
+
+            return getFinalDecibinary(1, currentDecimal, digits, nthPosition);
         }
 
-        static long decibinaryNumbers(long x)
+        static long getFinalDecibinary(int initialDigit, int decimalValue, int decimalPlaces, long desiredPosition)
         {
-            for (int i = 0; i <= x; i += 1)
-            {
-                var decimalNum = decibinaryToDecimal(i.ToString());
+            long decibinary = 0;
+            int remainingValue = 0;
+            int valuePerDigit = 1 << (decimalPlaces - 1);
+            int maxValueFor1LessDigit = decimalPlaces >= 2 ? maxValueForDigit[decimalPlaces - 2] : 0;
 
-                //if (i % 10 == 0)
-                //{
-                //    Console.WriteLine(string.Format("Decibinary: {0}; Decimal: {1}", i, decimalNum));
-                //}
+            // When number of copies for current number doesn't pass desired position, increment and return 
+            if (currentPosition + getNumberOfCopies(decimalValue, decimalPlaces) < desiredPosition)
+            {
+                currentPosition += getNumberOfCopies(decimalValue, decimalPlaces);
+                return 0;
+            }
+            
+            // Set an initial value for the digit that can reach desired value
+            if ((decimalValue - maxValueFor1LessDigit) / valuePerDigit > initialDigit)
+                initialDigit = (decimalValue - maxValueFor1LessDigit) / valuePerDigit;
+
+            for (int digit = initialDigit; digit < 10; digit++)
+            {
+                if (decimalPlaces == 1 && decimalValue < 10)
+                {
+                    decibinary = decimalValue;
+                }
+                else
+                {
+                    decibinary = digit * (long)Math.Pow(10, decimalPlaces - 1);
+
+                    remainingValue = decimalValue - digit * valuePerDigit;
+                }
+
+                if (maxValueFor1LessDigit < remainingValue)
+                    continue;
+
+                if (remainingValue == 0)
+                {
+                    currentPosition++;
+
+                    return decibinary;
+                }
+
+                decibinary += getFinalDecibinary(decimalPlaces > 2 ? 0 : 1, remainingValue, decimalPlaces - 1, desiredPosition);
+
+                if (currentPosition == desiredPosition)
+                {
+                    break;
+                }
             }
 
-            foreach (var item in dic)
+            return decibinary;
+        }
+
+        static int getMaximumDigitsForDecimal(long number)
+        {
+            int digits = 0;
+
+            while ((1 << digits) <= number)
             {
-                Console.WriteLine(string.Format("Number: {0}; Time: {1}", item.Key, item.Value));
+                digits++;
             }
 
-            return 1;
+            return digits;
+        }
+
+        static int calculateNumberOfDuplicatesUpToPosition(long desiredPosition)
+        {
+            int decimalNumber = 0;
+            long currentPosition = 0;
+            int remainingValue;
+
+            if (startPositionOffset.Count > 0)
+            {
+                decimalNumber = startPositionOffset.Count - 1;
+                currentPosition = startPositionOffset[decimalNumber];
+            }
+
+            while (currentPosition < desiredPosition)
+            {
+                if (decimalNumber >= numberToCompute)
+                {
+                    var numberOfCopies = new long[MaxNumberOfDigits];
+                    numberOfCopies[0] = numberToCompute < 10 ? 1 : 0; // Only numbers in range 0-9 can be represented with 1 digit
+                    numberOfCopiesForDigit.Add(numberOfCopies);
+
+                    for (int numberOfDigits = 1; numberOfDigits < MaxNumberOfDigits; numberOfDigits++)
+                    {
+                        for (int digit = 0; digit < 10; digit++)
+                        {
+                            // Calculate if current number can be represented with specific number of digits
+                            // E.g. If current number is 8 than it can be represented with 100 and 200. 100 = 4, 200 = 8
+                            // remainingValue will be 8 - 4 = 4 in case of decibinary 100 or 8 - 8 = 0 in case of decibinary 200
+                            remainingValue = numberToCompute - digit * (1 << numberOfDigits);
+
+                            // Exit if using digit creates number larger than target value.
+                            if (remainingValue < 0)
+                                break;
+
+                            // Adds the number of representations for the remainig value with less 1 digit
+                            // E.g. for 100 and number 8 remainig will be 4. Adds number of times 4 can be represented with 2 digits
+                            //numberOfCopies[numberOfDigits] += getNumberOfCopies(remainingValue, numberOfDigits);
+                            numberOfCopies[numberOfDigits] += numberOfCopiesForDigit[remainingValue][numberOfDigits - 1];
+                        }
+                    }
+
+                    numberToCompute = decimalNumber + 1;
+                    startPositionOffset.Add(currentPosition);
+                }
+
+                currentPosition += numberOfCopiesForDigit[decimalNumber].Last();
+                decimalNumber++;
+            }
+
+            return decimalNumber - 1;
+        }
+
+        static long getNumberOfCopies(int number, int digits)
+        {
+            return numberOfCopiesForDigit[number][digits - 1];
         }
 
         static void Main(string[] args)
         {
-            int q = Convert.ToInt32(Console.ReadLine());
+            string[] testCase = File.ReadAllLines(@"Dynamic Programming\Decibinary Numbers\testCase7.txt");
 
-            for (int qItr = 0; qItr < q; qItr++)
+            int q = Convert.ToInt32(testCase[0]);
+            long[] values = new long[q];
+            long[] sorted = new long[q];
+
+            var watch = Stopwatch.StartNew();
+
+            for (int index = 1; index < testCase.Length; index++)
             {
-                long x = Convert.ToInt64(Console.ReadLine());
-
-                long result = decibinaryNumbers(x);
-
-                Console.WriteLine(result);
+                values[index - 1] = Convert.ToInt64(testCase[index]);
             }
 
-            //Console.WriteLine(result);
+            Array.Copy(values, sorted, values.Length);
+            Array.Sort(sorted);
 
+            initialize();
+
+            for (int index = 0; index < q; index++)
+            {
+                results[sorted[index]] = decibinaryNumbers(sorted[index]);
+            }
+
+            watch.Stop();
+
+            //for (int i = 0; i < q; i++)
+            //{
+            //    Console.WriteLine(results[values[i]]);
+            //}
+
+            Console.WriteLine(string.Format("Elapsed time: {0} seconds", watch.Elapsed.TotalSeconds));
             Console.ReadKey();
         }
     }

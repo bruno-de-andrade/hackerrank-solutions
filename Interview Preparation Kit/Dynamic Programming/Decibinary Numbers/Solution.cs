@@ -192,6 +192,7 @@ namespace Interview_Preparation_Kit.Dynamic_Programming.Decibinary_Numbers
 
             initialize();
 
+            // Calculate the decibinaries sorted to be faster
             for (int index = 0; index < q; index++)
             {
                 results[sorted[index]] = decibinaryNumbers(sorted[index]);
@@ -199,10 +200,11 @@ namespace Interview_Preparation_Kit.Dynamic_Programming.Decibinary_Numbers
 
             watch.Stop();
 
-            //for (int i = 0; i < q; i++)
-            //{
-            //    Console.WriteLine(results[values[i]]);
-            //}
+            // Write the results in the same order of the inputed values
+            for (int index = 0; index < q; index++)
+            {
+                Console.WriteLine(results[values[index]]);
+            }
 
             Console.WriteLine(string.Format("Elapsed time: {0} seconds", watch.Elapsed.TotalSeconds));
             Console.ReadKey();

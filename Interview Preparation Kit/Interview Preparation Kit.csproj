@@ -122,6 +122,7 @@
     <Compile Include="Sorting\Merge Sort Counting Inversions\Solution.cs" />
     <Compile Include="Sorting\Sorting Bubble Sort\Solution.cs" />
     <Compile Include="Sorting\Sorting Comparator\Solution.cs" />
+    <Compile Include="Stacks and Queues\Balanced Brackets\Solution.cs" />
     <Compile Include="String Manipulation\Alternating Characters\Solution.cs" />
     <Compile Include="String Manipulation\Common Child\Solution.cs" />
     <Compile Include="String Manipulation\Sherlock and the Valid String\Solution.cs" />

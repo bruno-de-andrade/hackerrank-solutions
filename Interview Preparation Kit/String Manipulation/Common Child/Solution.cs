@@ -1,12 +1,11 @@
-﻿using System;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 
-namespace Interview_Preparation_Kit.String_Manipulation.Common_Child
+namespace InterviewPreparationKit.StringManipulation.CommonChild
 {
-    internal class Solution
+    class Solution
     {
         // Complete the commonChild function below.
-        private static int commonChild(string s1, string s2)
+        private static int CommonChild(string s1, string s2)
         {
             int[,] letterTable = new int[s1.Length, s2.Length];
 
@@ -39,7 +38,7 @@ namespace Interview_Preparation_Kit.String_Manipulation.Common_Child
 
             var watch = Stopwatch.StartNew();
 
-            int result = commonChild(s1, s2);
+            int result = CommonChild(s1, s2);
 
             watch.Stop();
 

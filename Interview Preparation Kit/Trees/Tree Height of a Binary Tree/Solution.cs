@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Interview_Preparation_Kit.Trees.Tree_Height_of_a_Binary_Tree
+﻿namespace InterviewPreparationKit.Trees.TreeHeightOfABinaryTree
 {
     class Solution
     {
@@ -18,7 +16,7 @@ namespace Interview_Preparation_Kit.Trees.Tree_Height_of_a_Binary_Tree
             }
         }
 
-        static int height(Node root)
+        static int Height(Node root)
         {
             if (root == null)
             {
@@ -30,18 +28,18 @@ namespace Interview_Preparation_Kit.Trees.Tree_Height_of_a_Binary_Tree
 
             if (root.left != null)
             {
-                leftHeight = 1 + height(root.left);
+                leftHeight = 1 + Height(root.left);
             }
 
             if (root.right != null)
             {
-                rightHeight = 1 + height(root.right);
+                rightHeight = 1 + Height(root.right);
             }
 
             return leftHeight > rightHeight ? leftHeight : rightHeight;
         }
 
-        static Node insert(Node root, int data)
+        static Node Insert(Node root, int data)
         {
             if (root == null)
             {
@@ -52,12 +50,12 @@ namespace Interview_Preparation_Kit.Trees.Tree_Height_of_a_Binary_Tree
                 Node cur;
                 if (data <= root.data)
                 {
-                    cur = insert(root.left, data);
+                    cur = Insert(root.left, data);
                     root.left = cur;
                 }
                 else
                 {
-                    cur = insert(root.right, data);
+                    cur = Insert(root.right, data);
                     root.right = cur;
                 }
                 return root;
@@ -74,10 +72,10 @@ namespace Interview_Preparation_Kit.Trees.Tree_Height_of_a_Binary_Tree
             for (int i = 0; i < t; i++)
             {
                 int data = Convert.ToInt32(treeValues[i]);
-                root = insert(root, data);
+                root = Insert(root, data);
             }
 
-            int treeHeight = height(root);
+            int treeHeight = Height(root);
 
             Console.WriteLine(treeHeight);
 

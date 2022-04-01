@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Interview_Preparation_Kit.Search.Swap_Nodes__Algo_
+﻿namespace InterviewPreparationKit.Search.SwapNodesAlgo
 {
     class Solution
     {
@@ -24,28 +18,28 @@ namespace Interview_Preparation_Kit.Search.Swap_Nodes__Algo_
 
         static Dictionary<int, List<Node>> dicNodesByLevel = new Dictionary<int, List<Node>>();
 
-        static int[][] swapNodes(int[][] indexes, int[] queries)
+        static int[][] SwapNodes(int[][] indexes, int[] queries)
         {
             int[][] result = new int[queries.Length][];
 
-            addNodesToTree(indexes);
+            AddNodesToTree(indexes);
 
             for (int i = 0; i < queries.Length; i++)
             {
                 // Swap all levels multiples of query number
                 for (int level = queries[i]; level < dicNodesByLevel.Count(); level+=queries[i])
                 {
-                    doSwap(level);
+                    DoSwap(level);
                 }
 
                 // Traverse the tree begining by root node
-                result[i] = traverseTree(dicNodesByLevel[1][0], new List<int>()).ToArray();
+                result[i] = TraverseTree(dicNodesByLevel[1][0], new List<int>()).ToArray();
             }
 
             return result;
         }
 
-        static void addNodesToTree(int[][] indexes)
+        static void AddNodesToTree(int[][] indexes)
         {
             // Add root node
             dicNodesByLevel.Add(1, new List<Node> { new Node(1) });
@@ -91,7 +85,7 @@ namespace Interview_Preparation_Kit.Search.Swap_Nodes__Algo_
         }
 
         // Swap tree left and right sides
-        static void doSwap(int levelToSwap)
+        static void DoSwap(int levelToSwap)
         {
             var nodes = dicNodesByLevel[levelToSwap];
 
@@ -104,12 +98,12 @@ namespace Interview_Preparation_Kit.Search.Swap_Nodes__Algo_
             }
         }
 
-        static List<int> traverseTree(Node currentNode, List<int> traversedNodes)
+        static List<int> TraverseTree(Node currentNode, List<int> traversedNodes)
         {
             // First traverse the whole tree left side
             if (currentNode.Left != null)
             {
-                traverseTree(currentNode.Left, traversedNodes);
+                TraverseTree(currentNode.Left, traversedNodes);
             }
 
             // Add current node into the list
@@ -118,7 +112,7 @@ namespace Interview_Preparation_Kit.Search.Swap_Nodes__Algo_
             // Then traverse right side
             if (currentNode.Right != null)
             {
-                traverseTree(currentNode.Right, traversedNodes);
+                TraverseTree(currentNode.Right, traversedNodes);
             }
 
             return traversedNodes;
@@ -147,7 +141,7 @@ namespace Interview_Preparation_Kit.Search.Swap_Nodes__Algo_
                 queries[queriesItr] = queriesItem;
             }
 
-            int[][] result = swapNodes(indexes, queries);
+            int[][] result = SwapNodes(indexes, queries);
 
             Console.WriteLine(string.Join("\n", result.Select(x => string.Join(" ", x))));
 

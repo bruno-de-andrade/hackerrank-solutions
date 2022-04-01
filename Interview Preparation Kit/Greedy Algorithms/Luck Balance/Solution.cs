@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Diagnostics;
 
-namespace Interview_Preparation_Kit.Greedy_Algorithms.Luck_Balance
+namespace InterviewPreparationKit.GreedyAlgorithms.LuckBalance
 {
     class Solution
     {
         // Complete the luckBalance function below.
-        private static int luckBalance(int k, int[][] contests)
+        private static int LuckBalance(int k, int[][] contests)
         {
             int countImportantContests = 0,
                 sumLuck = 0;
@@ -63,7 +58,7 @@ namespace Interview_Preparation_Kit.Greedy_Algorithms.Luck_Balance
 
             var watch = Stopwatch.StartNew();
 
-            int result = luckBalance(k, contests);
+            int result = LuckBalance(k, contests);
 
             watch.Stop();
 

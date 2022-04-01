@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace Interview_Preparation_Kit.Linked_Lists.Find_Merge_Point_of_Two_Lists
+﻿namespace InterviewPreparationKit.LinkedLists.FindMergePointOfTwoLists
 {
     class Solution
     {
@@ -12,8 +9,8 @@ namespace Interview_Preparation_Kit.Linked_Lists.Find_Merge_Point_of_Two_Lists
 
             public SinglyLinkedListNode(int nodeData)
             {
-                this.data = nodeData;
-                this.next = null;
+                data = nodeData;
+                next = null;
             }
         }
 
@@ -24,28 +21,28 @@ namespace Interview_Preparation_Kit.Linked_Lists.Find_Merge_Point_of_Two_Lists
 
             public SinglyLinkedList()
             {
-                this.head = null;
-                this.tail = null;
+                head = null;
+                tail = null;
             }
 
             public void InsertNode(int nodeData)
             {
                 SinglyLinkedListNode node = new SinglyLinkedListNode(nodeData);
 
-                if (this.head == null)
+                if (head == null)
                 {
-                    this.head = node;
+                    head = node;
                 }
                 else
                 {
-                    this.tail.next = node;
+                    tail.next = node;
                 }
 
-                this.tail = node;
+                tail = node;
             }
         }
 
-        static int findMergeNode(SinglyLinkedListNode curNode1, SinglyLinkedListNode curNode2)
+        static int FindMergeNode(SinglyLinkedListNode curNode1, SinglyLinkedListNode curNode2)
         {
             var head = curNode1;
 
@@ -59,10 +56,10 @@ namespace Interview_Preparation_Kit.Linked_Lists.Find_Merge_Point_of_Two_Lists
             curNode1.next = curNode2;
 
             // Find the node that starts the cycle and return its data
-            return getStartCycleNode(head).data;
+            return GetStartCycleNode(head).data;
         }
 
-        static SinglyLinkedListNode getStartCycleNode(SinglyLinkedListNode head)
+        static SinglyLinkedListNode GetStartCycleNode(SinglyLinkedListNode head)
         {
             var visitedNodes = new HashSet<SinglyLinkedListNode>();
             var currentNode = head;
@@ -84,7 +81,7 @@ namespace Interview_Preparation_Kit.Linked_Lists.Find_Merge_Point_of_Two_Lists
 
         static void Main(string[] args)
         {
-            var file = new System.IO.StreamReader(@"Linked Lists\Find Merge Point of Two Lists\testCase1.txt");
+            var file = new StreamReader(@"Linked Lists\Find Merge Point of Two Lists\testCase1.txt");
 
             int tests = Convert.ToInt32(file.ReadLine());
 
@@ -133,7 +130,7 @@ namespace Interview_Preparation_Kit.Linked_Lists.Find_Merge_Point_of_Two_Lists
 
                 ptr2.next = ptr1;
 
-                int result = findMergeNode(llist1.head, llist2.head);
+                int result = FindMergeNode(llist1.head, llist2.head);
 
                 Console.WriteLine(result);
             }

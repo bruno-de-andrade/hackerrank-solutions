@@ -1,23 +1,20 @@
-﻿using System;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 
-namespace Interview_Preparation_Kit.Search.Minimum_Time_Required
+namespace InterviewPreparationKit.Search.MinimumTimeRequired
 {
-    internal class Solution
+    class Solution
     {
-        private static long minTime(long[] machines, long goal)
+        private static long MinTime(long[] machines, long goal)
         {
             long currentTotalDays = 0,
                  currentProduction = 0,
-                 lastTotalDays,
                  lastProduction;
 
             //Calculate the maximum days of production possible 
-            long currentDaysSearch = getLongestProductionTime(machines) * goal / (machines.Length > goal ? goal : machines.Length);
+            long currentDaysSearch = GetLongestProductionTime(machines) * goal / (machines.Length > goal ? goal : machines.Length);
 
             do
             {
-                lastTotalDays = currentTotalDays;
                 lastProduction = currentProduction;
 
                 currentDaysSearch = currentDaysSearch > 1 ? currentDaysSearch / 2 : 1;
@@ -31,14 +28,14 @@ namespace Interview_Preparation_Kit.Search.Minimum_Time_Required
                     currentTotalDays -= currentDaysSearch; //Search in the left side
                 }
 
-                currentProduction = getProductionForDay(currentTotalDays, machines);
+                currentProduction = GetProductionForDay(currentTotalDays, machines);
             }
             while (currentProduction < goal || lastProduction >= goal || currentDaysSearch > 1);
 
             return currentTotalDays;
         }
 
-        private static long getLongestProductionTime(long[] machines)
+        private static long GetLongestProductionTime(long[] machines)
         {
             long longest = 0;
 
@@ -53,7 +50,7 @@ namespace Interview_Preparation_Kit.Search.Minimum_Time_Required
             return longest;
         }
 
-        private static long getProductionForDay(long day, long[] machines)
+        private static long GetProductionForDay(long day, long[] machines)
         {
             long production = 0;
 
@@ -83,7 +80,7 @@ namespace Interview_Preparation_Kit.Search.Minimum_Time_Required
 
             var watch = Stopwatch.StartNew();
 
-            long ans = minTime(machines, goal);
+            long ans = MinTime(machines, goal);
 
             watch.Stop();
 

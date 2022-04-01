@@ -1,11 +1,9 @@
-﻿using System;
-
-namespace Interview_Preparation_Kit.Dynamic_Programming.Max_Array_Sum
+﻿namespace InterviewPreparationKit.DynamicProgramming.MaxArraySum
 {
-    internal class Solution
+    class Solution
     {
         // Complete the maxSubsetSum function below.
-        private static int maxSubsetSum(int[] arr)
+        private static int MaxSubsetSum(int[] arr)
         {
             int maxSum = Math.Max(arr[0], arr[1]);
             int currentMax = -1;
@@ -28,7 +26,7 @@ namespace Interview_Preparation_Kit.Dynamic_Programming.Max_Array_Sum
             int n = Convert.ToInt32(Console.ReadLine());
 
             int[] arr = Array.ConvertAll(Console.ReadLine().Split(' '), arrTemp => Convert.ToInt32(arrTemp));
-            int res = maxSubsetSum(arr);
+            int res = MaxSubsetSum(arr);
 
             Console.WriteLine(res);
 

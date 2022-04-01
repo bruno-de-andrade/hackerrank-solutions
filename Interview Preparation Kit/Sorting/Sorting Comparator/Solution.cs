@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Diagnostics;
 
-namespace Interview_Preparation_Kit.Sorting.Sorting_Comparator
+namespace InterviewPreparationKit.Sorting.SortingComparator
 {
-    internal class Solution
+    class Solution
     {
         public static void Main(string[] args)
         {

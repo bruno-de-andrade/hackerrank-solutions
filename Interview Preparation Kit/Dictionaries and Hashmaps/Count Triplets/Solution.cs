@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
+﻿using System.Diagnostics;
 
-namespace Interview_Preparation_Kit.Dictionaries_and_Hashmaps.Count_Triplets
+namespace InterviewPreparationKit.DictionariesAndHashmaps.CountTriplets
 {
-    internal class Solution
+    class Solution
     {
-        private static long countTriplets(List<long> arr, long r)
+        private static long CountTriplets(List<long> arr, long r)
         {
             var dictionaryCount = new Dictionary<long, long>();
             var dictionaryPairs = new Dictionary<long, long>();
@@ -51,7 +48,7 @@ namespace Interview_Preparation_Kit.Dictionaries_and_Hashmaps.Count_Triplets
 
             var watch = Stopwatch.StartNew();
 
-            long ans = countTriplets(arr, r);
+            long ans = CountTriplets(arr, r);
 
             watch.Stop();
 

@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 
-namespace Interview_Preparation_Kit.String_Manipulation.Sherlock_and_the_Valid_String
+namespace InterviewPreparationKit.StringManipulation.SherlockAndTheValidString
 {
-    internal class Solution
+    class Solution
     {
         // Complete the isValid function below.
-        private static string isValid(string s)
+        private static string IsValid(string s)
         {
             var dicLetters = new Dictionary<char, int>();
             var dicFrequency = new Dictionary<int, int>();
@@ -68,7 +66,7 @@ namespace Interview_Preparation_Kit.String_Manipulation.Sherlock_and_the_Valid_S
 
             var watch = Stopwatch.StartNew();
 
-            string result = isValid(s);
+            string result = IsValid(s);
 
             watch.Stop();
 

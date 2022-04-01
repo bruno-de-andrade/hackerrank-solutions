@@ -1,11 +1,10 @@
-﻿using System;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 
-namespace Interview_Preparation_Kit.Arrays._2D_Array___DS
+namespace InterviewPreparationKit.Arrays.TwoDArrayDS
 {
-    internal class Solution
+    class Solution
     {
-        private static int hourglassSum(int[][] arr)
+        private static int HourglassSum(int[][] arr)
         {
             int? maxSum = null;
 
@@ -38,7 +37,7 @@ namespace Interview_Preparation_Kit.Arrays._2D_Array___DS
 
             var watch = Stopwatch.StartNew();
 
-            int result = hourglassSum(arr);
+            int result = HourglassSum(arr);
 
             watch.Stop();
 

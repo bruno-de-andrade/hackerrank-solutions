@@ -1,16 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 
-namespace Interview_Preparation_Kit.String_Manipulation.Special_Palindrome_Again
+namespace InterviewPreparationKit.StringManipulation.SpecialPalindromeAgain
 {
-    internal class Solution
+    class Solution
     {
         // Complete the substrCount function below.
-        private static long substrCount(int n, string s)
+        private static long SubstrCount(int n, string s)
         {
             var dicWords = new Dictionary<string, bool>();
-            string word = string.Empty;
             int countPalindromes = 0,
                 indexWordDoesntMatch = 0;
 
@@ -18,11 +15,11 @@ namespace Interview_Preparation_Kit.String_Manipulation.Special_Palindrome_Again
             {
                 for (int length = 2; startIndex + length <= s.Length; length++)
                 {
-                    word = s.Substring(startIndex, length);
+                    string word = s.Substring(startIndex, length);
 
                     if (!dicWords.TryGetValue(word, out bool isPalindrome))
                     {
-                        indexWordDoesntMatch = checkPalindrome(word);
+                        indexWordDoesntMatch = CheckPalindrome(word);
                         isPalindrome = indexWordDoesntMatch == 0;
 
                         dicWords.Add(word, isPalindrome);
@@ -44,7 +41,7 @@ namespace Interview_Preparation_Kit.String_Manipulation.Special_Palindrome_Again
         }
 
         //Returns the index of first word that not match
-        private static int checkPalindrome(string word)
+        private static int CheckPalindrome(string word)
         {
             bool isEven = word.Length % 2 == 0;
             int middle = word.Length / 2;
@@ -69,7 +66,7 @@ namespace Interview_Preparation_Kit.String_Manipulation.Special_Palindrome_Again
 
             var watch = Stopwatch.StartNew();
 
-            long result = substrCount(s.Length, s);
+            long result = SubstrCount(s.Length, s);
 
             watch.Stop();
 

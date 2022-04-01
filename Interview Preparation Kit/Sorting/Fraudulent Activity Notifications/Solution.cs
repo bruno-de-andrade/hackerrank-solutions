@@ -1,19 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Diagnostics;
 
-namespace Interview_Preparation_Kit.Sorting.Fraudulent_Activity_Notifications
+namespace InterviewPreparationKit.Sorting.FraudulentActivityNotifications
 {
     class Solution
     {
         // Complete the activityNotifications function below.
-        static int activityNotifications(int[] expenditure, int d)
+        static int ActivityNotifications(int[] expenditure, int d)
         {
             int countNotifications = 0;
-            decimal median = 0;
             int[] lastExpenditures = new int[d];
             bool odd = false;
 
@@ -22,7 +16,7 @@ namespace Interview_Preparation_Kit.Sorting.Fraudulent_Activity_Notifications
                 odd = true;
             }
 
-            int maxValue = getMaxValue(expenditure);
+            int maxValue = GetMaxValue(expenditure);
             int[] counting = new int[maxValue + 1];
 
             //initialize counting array
@@ -35,7 +29,7 @@ namespace Interview_Preparation_Kit.Sorting.Fraudulent_Activity_Notifications
             {
                 Array.Copy(expenditure, index - d, lastExpenditures, 0, d);
 
-                median = getMedianValue(counting, d, odd);
+                decimal median = GetMedianValue(counting, d, odd);
 
                 if (expenditure[index] >= (median * 2))
                 {
@@ -49,7 +43,7 @@ namespace Interview_Preparation_Kit.Sorting.Fraudulent_Activity_Notifications
             return countNotifications;
         }
 
-        static int getMaxValue(int[] expenditure)
+        static int GetMaxValue(int[] expenditure)
         {
             int maxValue = expenditure[0];
 
@@ -64,7 +58,7 @@ namespace Interview_Preparation_Kit.Sorting.Fraudulent_Activity_Notifications
             return maxValue;
         }
 
-        static decimal getMedianValue(int[] counting, int d, bool odd)
+        static decimal GetMedianValue(int[] counting, int d, bool odd)
         {
             int medianCount = d / 2, //how much to count to find the median element
                 currentCount = 0,
@@ -112,7 +106,7 @@ namespace Interview_Preparation_Kit.Sorting.Fraudulent_Activity_Notifications
 
             var watch = Stopwatch.StartNew();
 
-            int result = activityNotifications(expenditure, d);
+            int result = ActivityNotifications(expenditure, d);
 
             watch.Stop();
 

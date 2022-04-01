@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
+﻿using System.Diagnostics;
 
-namespace Interview_Preparation_Kit.Dynamic_Programming.Decibinary_Numbers
+namespace InterviewPreparationKit.DynamicProgramming.DecibinaryNumbers
 {
     class Solution
     {
@@ -17,7 +13,7 @@ namespace Interview_Preparation_Kit.Dynamic_Programming.Decibinary_Numbers
         static int numberToCompute = 0;
         static long currentPosition = 0;
 
-        static void initialize()
+        static void Initialize()
         {
             // Calculate maximum possible value for each digit
             int maxValue = 0;
@@ -30,14 +26,14 @@ namespace Interview_Preparation_Kit.Dynamic_Programming.Decibinary_Numbers
             }
         }
 
-        static long decibinaryNumbers(long nthPosition)
+        static long DecibinaryNumbers(long nthPosition)
         {
             // As last decimal surpassed the position we are looking for, check all posibilities for last number
-            int currentDecimal = calculateNumberOfDuplicatesUpToPosition(nthPosition);
+            int currentDecimal = CalculateNumberOfDuplicatesUpToPosition(nthPosition);
             currentPosition = startPositionOffset[currentDecimal];
 
             // Gets maximum number of digits the decimal can be represented in decibinary
-            int maxDigits = getMaximumDigitsForDecimal(currentDecimal);
+            int maxDigits = GetMaximumDigitsForDecimal(currentDecimal);
             int digits;
 
             for (digits = 1; digits <= maxDigits; digits++)
@@ -49,10 +45,10 @@ namespace Interview_Preparation_Kit.Dynamic_Programming.Decibinary_Numbers
                 }
             }
 
-            return getFinalDecibinary(1, currentDecimal, digits, nthPosition);
+            return GetFinalDecibinary(1, currentDecimal, digits, nthPosition);
         }
 
-        static long getFinalDecibinary(int initialDigit, int decimalValue, int decimalPlaces, long desiredPosition)
+        static long GetFinalDecibinary(int initialDigit, int decimalValue, int decimalPlaces, long desiredPosition)
         {
             long decibinary = 0;
             int remainingValue = 0;
@@ -60,9 +56,9 @@ namespace Interview_Preparation_Kit.Dynamic_Programming.Decibinary_Numbers
             int maxValueFor1LessDigit = decimalPlaces >= 2 ? maxValueForDigit[decimalPlaces - 2] : 0;
 
             // When number of copies for current number doesn't pass desired position, increment and return 
-            if (currentPosition + getNumberOfCopies(decimalValue, decimalPlaces) < desiredPosition)
+            if (currentPosition + GetNumberOfCopies(decimalValue, decimalPlaces) < desiredPosition)
             {
-                currentPosition += getNumberOfCopies(decimalValue, decimalPlaces);
+                currentPosition += GetNumberOfCopies(decimalValue, decimalPlaces);
                 return 0;
             }
             
@@ -93,7 +89,7 @@ namespace Interview_Preparation_Kit.Dynamic_Programming.Decibinary_Numbers
                     return decibinary;
                 }
 
-                decibinary += getFinalDecibinary(decimalPlaces > 2 ? 0 : 1, remainingValue, decimalPlaces - 1, desiredPosition);
+                decibinary += GetFinalDecibinary(decimalPlaces > 2 ? 0 : 1, remainingValue, decimalPlaces - 1, desiredPosition);
 
                 if (currentPosition == desiredPosition)
                 {
@@ -104,7 +100,7 @@ namespace Interview_Preparation_Kit.Dynamic_Programming.Decibinary_Numbers
             return decibinary;
         }
 
-        static int getMaximumDigitsForDecimal(long number)
+        static int GetMaximumDigitsForDecimal(long number)
         {
             int digits = 0;
 
@@ -116,7 +112,7 @@ namespace Interview_Preparation_Kit.Dynamic_Programming.Decibinary_Numbers
             return digits;
         }
 
-        static int calculateNumberOfDuplicatesUpToPosition(long desiredPosition)
+        static int CalculateNumberOfDuplicatesUpToPosition(long desiredPosition)
         {
             int decimalNumber = 0;
             long currentPosition = 0;
@@ -167,7 +163,7 @@ namespace Interview_Preparation_Kit.Dynamic_Programming.Decibinary_Numbers
             return decimalNumber - 1;
         }
 
-        static long getNumberOfCopies(int number, int digits)
+        static long GetNumberOfCopies(int number, int digits)
         {
             return numberOfCopiesForDigit[number][digits - 1];
         }
@@ -190,12 +186,12 @@ namespace Interview_Preparation_Kit.Dynamic_Programming.Decibinary_Numbers
             Array.Copy(values, sorted, values.Length);
             Array.Sort(sorted);
 
-            initialize();
+            Initialize();
 
             // Calculate the decibinaries sorted to be faster
             for (int index = 0; index < q; index++)
             {
-                results[sorted[index]] = decibinaryNumbers(sorted[index]);
+                results[sorted[index]] = DecibinaryNumbers(sorted[index]);
             }
 
             watch.Stop();

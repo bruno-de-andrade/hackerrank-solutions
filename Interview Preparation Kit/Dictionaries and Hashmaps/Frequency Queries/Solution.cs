@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
+﻿using System.Diagnostics;
 
-namespace Interview_Preparation_Kit.Dictionaries_and_Hashmaps.Frequency_Queries
+namespace InterviewPreparationKit.DictionariesAndHashmaps.FrequencyQueries
 {
-    internal class Solution
+    class Solution
     {
-        private static List<int> freqQuery(List<List<int>> queries)
+        private static List<int> FreqQuery(List<List<int>> queries)
         {
             var returnList = new List<int>();
             var dictionaryFrequency = new Dictionary<int, int>();
@@ -92,7 +88,7 @@ namespace Interview_Preparation_Kit.Dictionaries_and_Hashmaps.Frequency_Queries
 
             var watch = Stopwatch.StartNew();
 
-            List<int> ans = freqQuery(queries);
+            List<int> ans = FreqQuery(queries);
 
             watch.Stop();
 

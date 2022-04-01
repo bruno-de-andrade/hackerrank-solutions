@@ -1,10 +1,8 @@
-﻿using System;
-
-namespace Interview_Preparation_Kit.Search.Pairs
+﻿namespace InterviewPreparationKit.Search.Pairs
 {
-    internal class Solution
+    class Solution
     {
-        private static int pairs(int k, int[] arr)
+        private static int Pairs(int k, int[] arr)
         {
             int pairsCount = 0,
                 difference;
@@ -40,7 +38,7 @@ namespace Interview_Preparation_Kit.Search.Pairs
             int k = Convert.ToInt32(nk[1]);
 
             int[] arr = Array.ConvertAll(Console.ReadLine().Split(' '), arrTemp => Convert.ToInt32(arrTemp));
-            int result = pairs(k, arr);
+            int result = Pairs(k, arr);
 
             Console.WriteLine(result);
 

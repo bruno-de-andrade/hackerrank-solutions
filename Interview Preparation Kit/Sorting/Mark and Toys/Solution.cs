@@ -1,12 +1,11 @@
-﻿using System;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 
-namespace Interview_Preparation_Kit.Sorting.Mark_and_Toys
+namespace InterviewPreparationKit.Sorting.MarkAndToys
 {
-    internal class Solution
+    class Solution
     {
         // Complete the maximumToys function below.
-        private static int maximumToys(int[] prices, int k)
+        private static int MaximumToys(int[] prices, int k)
         {
             int aux, countToys = 0, sumPrice = 0;
 
@@ -47,7 +46,7 @@ namespace Interview_Preparation_Kit.Sorting.Mark_and_Toys
             
             var watch = Stopwatch.StartNew();
 
-            int result = maximumToys(prices, k);
+            int result = MaximumToys(prices, k);
             
             watch.Stop();
 

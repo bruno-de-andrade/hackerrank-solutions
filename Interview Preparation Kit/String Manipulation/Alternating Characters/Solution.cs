@@ -1,12 +1,11 @@
-﻿using System;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 
-namespace Interview_Preparation_Kit.String_Manipulation.Alternating_Characters
+namespace InterviewPreparationKit.StringManipulation.AlternatingCharacters
 {
-    internal class Solution
+    class Solution
     {
         // Complete the alternatingCharacters function below.
-        private static int alternatingCharacters(string s)
+        private static int AlternatingCharacters(string s)
         {
             char lastChar = ' ';
             int countDeletions = 0;
@@ -34,7 +33,7 @@ namespace Interview_Preparation_Kit.String_Manipulation.Alternating_Characters
 
                 var watch = Stopwatch.StartNew();
 
-                int result = alternatingCharacters(s);
+                int result = AlternatingCharacters(s);
 
                 watch.Stop();
 

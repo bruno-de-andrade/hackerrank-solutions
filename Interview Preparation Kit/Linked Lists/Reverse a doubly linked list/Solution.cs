@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Interview_Preparation_Kit.Linked_Lists.Reverse_a_doubly_linked_list
+﻿namespace InterviewPreparationKit.LinkedLists.ReverseDoublyLinkedList
 {
     class Solution
     {
@@ -12,9 +10,9 @@ namespace Interview_Preparation_Kit.Linked_Lists.Reverse_a_doubly_linked_list
 
             public DoublyLinkedListNode(int nodeData)
             {
-                this.data = nodeData;
-                this.next = null;
-                this.prev = null;
+                data = nodeData;
+                next = null;
+                prev = null;
             }
         }
 
@@ -25,25 +23,25 @@ namespace Interview_Preparation_Kit.Linked_Lists.Reverse_a_doubly_linked_list
 
             public DoublyLinkedList()
             {
-                this.head = null;
-                this.tail = null;
+                head = null;
+                tail = null;
             }
 
             public void InsertNode(int nodeData)
             {
                 DoublyLinkedListNode node = new DoublyLinkedListNode(nodeData);
 
-                if (this.head == null)
+                if (head == null)
                 {
-                    this.head = node;
+                    head = node;
                 }
                 else
                 {
-                    this.tail.next = node;
-                    node.prev = this.tail;
+                    tail.next = node;
+                    node.prev = tail;
                 }
 
-                this.tail = node;
+                tail = node;
             }
         }
 
@@ -62,7 +60,7 @@ namespace Interview_Preparation_Kit.Linked_Lists.Reverse_a_doubly_linked_list
             }
         }
 
-        static DoublyLinkedListNode reverse(DoublyLinkedListNode currentNode)
+        static DoublyLinkedListNode Reverse(DoublyLinkedListNode currentNode)
         {
             while (true)
             {
@@ -98,7 +96,7 @@ namespace Interview_Preparation_Kit.Linked_Lists.Reverse_a_doubly_linked_list
                     llist.InsertNode(llistItem);
                 }
 
-                DoublyLinkedListNode llist1 = reverse(llist.head);
+                DoublyLinkedListNode llist1 = Reverse(llist.head);
 
                 PrintDoublyLinkedList(llist1, " ");
                 Console.WriteLine();

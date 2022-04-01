@@ -1,11 +1,9 @@
-﻿using System;
-
-namespace Interview_Preparation_Kit.Warm_up_Challenges.Jumping_on_the_Clouds
+﻿namespace InterviewPreparationKit.WarmUpChallenges.JumpingOnTheClouds
 {
-    internal class Solution
+    class Solution
     {
         // Complete the jumpingOnClouds function below.
-        private static int jumpingOnClouds(int[] c)
+        private static int JumpingOnClouds(int[] c)
         {
             int index = 0,
                 jumps = 0;
@@ -32,7 +30,7 @@ namespace Interview_Preparation_Kit.Warm_up_Challenges.Jumping_on_the_Clouds
             int n = Convert.ToInt32(Console.ReadLine());
 
             int[] c = Array.ConvertAll(Console.ReadLine().Split(' '), cTemp => Convert.ToInt32(cTemp));
-            int result = jumpingOnClouds(c);
+            int result = JumpingOnClouds(c);
 
             Console.WriteLine(result);
 

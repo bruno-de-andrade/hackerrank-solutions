@@ -1,14 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 
-namespace Interview_Preparation_Kit.Recursion_and_Backtracking.Recursion_Davis_Staircase
+namespace InterviewPreparationKit.RecursionAndBacktracking.RecursionDavisStaircase
 {
     class Solution
     {
         static Dictionary<int, int> dic = new Dictionary<int, int>();
 
-        static int stepPerms(int n)
+        static int StepPerms(int n)
         {
             if (n == 0)
             {
@@ -24,7 +22,7 @@ namespace Interview_Preparation_Kit.Recursion_and_Backtracking.Recursion_Davis_S
                 {
                     if (n >= steps)
                     {
-                        count += stepPerms(n - steps);
+                        count += StepPerms(n - steps);
                     }
                 }
 
@@ -36,7 +34,7 @@ namespace Interview_Preparation_Kit.Recursion_and_Backtracking.Recursion_Davis_S
 
         static void Main(string[] args)
         {
-            var file = new System.IO.StreamReader(@"Recursion and Backtracking\Recursion Davis Staircase\testCase1.txt");
+            var file = new StreamReader(@"Recursion and Backtracking\Recursion Davis Staircase\testCase1.txt");
 
             int s = Convert.ToInt32(file.ReadLine());
 
@@ -46,7 +44,7 @@ namespace Interview_Preparation_Kit.Recursion_and_Backtracking.Recursion_Davis_S
             {
                 int n = Convert.ToInt32(file.ReadLine());
 
-                int res = stepPerms(n);
+                int res = StepPerms(n);
 
                 Console.WriteLine(res);
             }

@@ -1,11 +1,10 @@
-﻿using System;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 
-namespace Interview_Preparation_Kit.Arrays.Minimum_Swaps_2
+namespace InterviewPreparationKit.Arrays.MinimumSwaps2
 {
-    internal class Solution
+    class Solution
     {
-        private static int minimumSwaps(int[] arr)
+        private static int MinimumSwaps(int[] arr)
         {
             int swaps = 0;
 
@@ -38,7 +37,7 @@ namespace Interview_Preparation_Kit.Arrays.Minimum_Swaps_2
 
             var watch = Stopwatch.StartNew();
 
-            int res = minimumSwaps(arr);
+            int res = MinimumSwaps(arr);
 
             watch.Stop();
 

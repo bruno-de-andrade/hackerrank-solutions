@@ -1,11 +1,9 @@
-﻿using System;
-
-namespace Interview_Preparation_Kit.Warm_up_Challenges.Counting_Valleys
+﻿namespace InterviewPreparationKit.WarmUpChallenges.CountingValleys
 {
-    internal class Solution
+    class Solution
     {
         // Complete the countingValleys function below.
-        private static int countingValleys(int n, string s)
+        private static int CountingValleys(int n, string s)
         {
             int position = 0,
                 numberOfValleys = 0;
@@ -35,7 +33,7 @@ namespace Interview_Preparation_Kit.Warm_up_Challenges.Counting_Valleys
 
             string s = Console.ReadLine();
 
-            int result = countingValleys(n, s);
+            int result = CountingValleys(n, s);
 
             Console.WriteLine(result);
 

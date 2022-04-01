@@ -1,8 +1,6 @@
-﻿using System;
-
-namespace Interview_Preparation_Kit.Warm_up_Challenges.Sock_Merchant
+﻿namespace InterviewPreparationKit.WarmUpChallenges.SockMerchant
 {
-    internal class Solution
+    class Solution
     {
         // Complete the sockMerchant function below.
         private static int sockMerchant(int n, int[] ar)

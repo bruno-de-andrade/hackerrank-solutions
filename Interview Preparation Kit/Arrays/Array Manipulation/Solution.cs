@@ -1,12 +1,11 @@
-﻿using System;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 
-namespace Interview_Preparation_Kit.Arrays.Array_Manipulation
+namespace InterviewPreparationKit.Arrays.ArrayManipulation
 {
-    internal class Solution
+    class Solution
     {
         //Stores only the difference between subsequent indexes
-        private static long arrayManipulation(int n, int[][] queries)
+        private static long ArrayManipulation(int n, int[][] queries)
         {
             long[] list = new long[n];
             long maxValue = 0,
@@ -33,7 +32,7 @@ namespace Interview_Preparation_Kit.Arrays.Array_Manipulation
         }
 
         //Solution too slow with huge test cases
-        private static long arrayManipulation2(int n, int[][] queries)
+        private static long ArrayManipulation2(int n, int[][] queries)
         {
             long[] list = new long[n];
             long maxValue = 0;
@@ -77,7 +76,7 @@ namespace Interview_Preparation_Kit.Arrays.Array_Manipulation
 
             var watch = Stopwatch.StartNew();
 
-            long result = arrayManipulation(n, queries);
+            long result = ArrayManipulation(n, queries);
 
             watch.Stop();
 

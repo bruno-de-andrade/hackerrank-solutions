@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 
-namespace Interview_Preparation_Kit.Search.Hash_Tables_Ice_Cream_Parlor
+namespace InterviewPreparationKit.Search.HashTablesIceCreamParlor
 {
-    internal class Solution
+    class Solution
     {
         // Complete the whatFlavors function below.
-        private static void whatFlavors(int[] cost, int money)
+        private static void WhatFlavors(int[] cost, int money)
         {
             var dicIndexes = new Dictionary<int, int>();
 
@@ -32,7 +30,7 @@ namespace Interview_Preparation_Kit.Search.Hash_Tables_Ice_Cream_Parlor
 
         private static void Main(string[] args)
         {
-            var file = new System.IO.StreamReader(@"Search\Hash Tables Ice Cream Parlor\testCase1.txt");
+            var file = new StreamReader(@"Search\Hash Tables Ice Cream Parlor\testCase1.txt");
 
             var watch = Stopwatch.StartNew();
 
@@ -46,7 +44,7 @@ namespace Interview_Preparation_Kit.Search.Hash_Tables_Ice_Cream_Parlor
 
                 int[] cost = Array.ConvertAll(file.ReadLine().Trim().Split(' '), costTemp => Convert.ToInt32(costTemp));
 
-                whatFlavors(cost, money);
+                WhatFlavors(cost, money);
             }
 
             watch.Stop();

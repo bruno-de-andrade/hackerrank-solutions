@@ -1,11 +1,10 @@
-﻿using System;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 
-namespace Interview_Preparation_Kit.Sorting.Sorting_Bubble_Sort
+namespace InterviewPreparationKit.Sorting.SortingBubbleSort
 {
-    internal class Solution
+    class Solution
     {
-        private static void countSwaps(int[] a)
+        private static void CountSwaps(int[] a)
         {
             int countSwaps = 0;
             bool isSorted = false;
@@ -46,7 +45,7 @@ namespace Interview_Preparation_Kit.Sorting.Sorting_Bubble_Sort
 
             var watch = Stopwatch.StartNew();
 
-            countSwaps(a);
+            CountSwaps(a);
 
             watch.Stop();
 

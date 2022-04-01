@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
+﻿using System.Diagnostics;
 
-namespace Interview_Preparation_Kit.Dictionaries_and_Hashmaps.Sherlock_and_Anagrams
+namespace InterviewPreparationKit.DictionariesAndHashmaps.SherlockAndAnagrams
 {
-    internal class Solution
+    class Solution
     {
-        private static int sherlockAndAnagrams(string s)
+        private static int SherlockAndAnagrams(string s)
         {
             int countAnagrams = 0;
             var dictionary = new Dictionary<string, int>();
@@ -44,7 +41,7 @@ namespace Interview_Preparation_Kit.Dictionaries_and_Hashmaps.Sherlock_and_Anagr
 
                 var watch = Stopwatch.StartNew();
 
-                int result = sherlockAndAnagrams(s);
+                int result = SherlockAndAnagrams(s);
 
                 watch.Stop();
 

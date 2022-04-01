@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
+﻿using System.Diagnostics;
 
-namespace Interview_Preparation_Kit.Greedy_Algorithms.Reverse_Shuffle_Merge
+namespace InterviewPreparationKit.GreedyAlgorithms.ReverseShuffleMerge
 {
     class Solution
     {
         // Complete the reverseShuffleMerge function below.
-        static string reverseShuffleMerge(string s)
+        static string ReverseShuffleMerge(string s)
         {
             if (s == "aeiouuoiea") //Condition to pass the wrong test case
                 return "eaid";
@@ -37,7 +34,7 @@ namespace Interview_Preparation_Kit.Greedy_Algorithms.Reverse_Shuffle_Merge
                 dicFrequency[dicFrequency.ElementAt(index).Key] /= 2;
             }
 
-            char smallestPossible = getLexicographicallySmaller(dicFrequency);
+            char smallestPossible = GetLexicographicallySmaller(dicFrequency);
 
             for (int index = s.Length - 1; index >= 0; index--)
             {
@@ -46,33 +43,33 @@ namespace Interview_Preparation_Kit.Greedy_Algorithms.Reverse_Shuffle_Merge
                     continue;
                 }
 
-                if (s[index] != smallestPossible && charCanBeIgnored(s[index], s.Substring(0, index), dicFrequency))
+                if (s[index] != smallestPossible && CharCanBeIgnored(s[index], s.Substring(0, index), dicFrequency))
                 {
                     canIgnore.Add(Tuple.Create(s[index], index));
                     continue;
                 }
                 else if (s[index] != smallestPossible && canIgnore.Count > 0)
                 {
-                    smaller = canIgnore[getIndexLexicographicallySmaller(canIgnore)].Item1;
+                    smaller = canIgnore[GetIndexLexicographicallySmaller(canIgnore)].Item1;
 
                     //If the current char can't be ignored and is higher 
                     //than any of the ignored ones, go to the smaller ignored and get it
                     if (s[index] >= smaller)
                     {
-                        index = getIndexBestSeenSkiped(canIgnore, smaller);
+                        index = GetIndexBestSeenSkiped(canIgnore, smaller);
                     }
                 }
 
                 finalString += s[index];
                 dicFrequency[s[index]]--;
-                smallestPossible = getLexicographicallySmaller(dicFrequency);
+                smallestPossible = GetLexicographicallySmaller(dicFrequency);
                 canIgnore = new List<Tuple<char, int>>();
             }
 
             return finalString;
         }
 
-        private static int getIndexBestSeenSkiped(List<Tuple<char, int>> listIgnored, char c)
+        private static int GetIndexBestSeenSkiped(List<Tuple<char, int>> listIgnored, char c)
         {
             int maxIndex = 0;
             for (int index = 0; index < listIgnored.Count; index++)
@@ -86,13 +83,13 @@ namespace Interview_Preparation_Kit.Greedy_Algorithms.Reverse_Shuffle_Merge
             return maxIndex;
         }
 
-        private static bool charCanBeIgnored(char charToCheck, string inputString, Dictionary<char, int> dicFrequencies)
+        private static bool CharCanBeIgnored(char charToCheck, string inputString, Dictionary<char, int> dicFrequencies)
         {
             return inputString.Count(c => c == charToCheck) -
                    dicFrequencies[charToCheck] >= 0;
         }
 
-        private static char getLexicographicallySmaller(Dictionary<char, int> dicCharacters)
+        private static char GetLexicographicallySmaller(Dictionary<char, int> dicCharacters)
         {
             char minChar = '0',
                  currentChar;
@@ -110,7 +107,7 @@ namespace Interview_Preparation_Kit.Greedy_Algorithms.Reverse_Shuffle_Merge
             return minChar;
         }
 
-        private static int getIndexLexicographicallySmaller(List<Tuple<char, int>> canIgnore)
+        private static int GetIndexLexicographicallySmaller(List<Tuple<char, int>> canIgnore)
         {
             char minChar = canIgnore[0].Item1;
             int minIndex = 0;
@@ -133,7 +130,7 @@ namespace Interview_Preparation_Kit.Greedy_Algorithms.Reverse_Shuffle_Merge
 
             var watch = Stopwatch.StartNew();
 
-            string result = reverseShuffleMerge(s);
+            string result = ReverseShuffleMerge(s);
 
             watch.Stop();
 

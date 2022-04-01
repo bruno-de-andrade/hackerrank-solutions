@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace Interview_Preparation_Kit.Recursion_and_Backtracking.Crossword_Puzzle
+﻿namespace InterviewPreparationKit.RecursionAndBacktracking.CrosswordPuzzle
 {
     class Solution
     {
-        static string[] crosswordPuzzle(string[] crossword, string words)
+        static string[] CrosswordPuzzle(string[] crossword, string words)
         {
             if (string.IsNullOrEmpty(words))
             {
@@ -27,13 +23,13 @@ namespace Interview_Preparation_Kit.Recursion_and_Backtracking.Crossword_Puzzle
                     // if next horizontal space is also a '-', its a horizontal word
                     bool spaceIsHorizontal = wordSpaceIndex < 9 && crosswordAttempt[row][wordSpaceIndex + 1] == '-';
                     int spaceLength = spaceIsHorizontal
-                        ? getSpaceLengthHorizontal(crossword[row], wordSpaceIndex)
-                        : getSpaceLengthVertical(crossword, row, wordSpaceIndex);
+                        ? GetSpaceLengthHorizontal(crossword[row], wordSpaceIndex)
+                        : GetSpaceLengthVertical(crossword, row, wordSpaceIndex);
 
                     // Try fill available words
                     for (int i = 0; i < wordsArray.Count; i++)
                     {
-                        string startLetter = getSpaceFilledStartLetter(crosswordAttempt, spaceIsHorizontal, wordSpaceIndex, row);
+                        string startLetter = GetSpaceFilledStartLetter(crosswordAttempt, spaceIsHorizontal, wordSpaceIndex, row);
 
                         var fullWord = wordsArray[i];
                         var word = wordsArray[i].Substring(startLetter.Length, wordsArray[i].Length - startLetter.Length);
@@ -62,7 +58,7 @@ namespace Interview_Preparation_Kit.Recursion_and_Backtracking.Crossword_Puzzle
                         var newWordsArray = new List<string>(wordsArray);
                         newWordsArray.RemoveAt(i);
 
-                        var finalCrossword = crosswordPuzzle(crosswordAttempt, string.Join(";", newWordsArray));
+                        var finalCrossword = CrosswordPuzzle(crosswordAttempt, string.Join(";", newWordsArray));
 
                         // If all positions are filled
                         if (!finalCrossword.ToList().Any(a => a.Contains("-")))
@@ -84,7 +80,7 @@ namespace Interview_Preparation_Kit.Recursion_and_Backtracking.Crossword_Puzzle
             return crossword;
         }
 
-        static int getSpaceLengthHorizontal(string row, int columnIndex)
+        static int GetSpaceLengthHorizontal(string row, int columnIndex)
         {
             var startIndex = columnIndex;
 
@@ -96,7 +92,7 @@ namespace Interview_Preparation_Kit.Recursion_and_Backtracking.Crossword_Puzzle
             return columnIndex - startIndex;
         }
 
-        static int getSpaceLengthVertical(string[] crossword, int rowIndex, int columnIndex)
+        static int GetSpaceLengthVertical(string[] crossword, int rowIndex, int columnIndex)
         {
             var index = rowIndex;
 
@@ -109,7 +105,7 @@ namespace Interview_Preparation_Kit.Recursion_and_Backtracking.Crossword_Puzzle
         }
 
         // Check is space was already partially filled
-        static string getSpaceFilledStartLetter(string[] crossword, bool spaceIsHorizontal, int wordSpaceIndex, int row)
+        static string GetSpaceFilledStartLetter(string[] crossword, bool spaceIsHorizontal, int wordSpaceIndex, int row)
         {
             string startLetter = string.Empty;
 
@@ -130,7 +126,7 @@ namespace Interview_Preparation_Kit.Recursion_and_Backtracking.Crossword_Puzzle
         {
             string[] crossword = new string[10];
 
-            var file = new System.IO.StreamReader(@"Recursion and Backtracking\Crossword Puzzle\testCase1.txt");
+            var file = new StreamReader(@"Recursion and Backtracking\Crossword Puzzle\testCase1.txt");
 
             for (int i = 0; i < 10; i++)
             {
@@ -142,7 +138,7 @@ namespace Interview_Preparation_Kit.Recursion_and_Backtracking.Crossword_Puzzle
 
             string words = "CALIFORNIA;NIGERIA;CANADA;TELAVIV";
 
-            string[] result = crosswordPuzzle(crossword, words);
+            string[] result = CrosswordPuzzle(crossword, words);
 
             Console.WriteLine(string.Join("\n", result));
 

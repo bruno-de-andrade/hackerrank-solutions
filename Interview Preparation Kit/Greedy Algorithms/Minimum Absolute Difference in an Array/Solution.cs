@@ -1,24 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Interview_Preparation_Kit.Greedy_Algorithms.Minimum_Absolute_Difference_in_an_Array
+﻿namespace InterviewPreparationKit.GreedyAlgorithms.MinimumAbsoluteDifferenceInAnArray
 {
     class Solution
     {
         // Complete the minimumAbsoluteDifference function below.
-        static int minimumAbsoluteDifference(int[] arr)
+        static int MinimumAbsoluteDifference(int[] arr)
         {
-            int minDiff = Math.Abs(arr[0] - arr[1]),
-                diff = 0;
+            int minDiff = Math.Abs(arr[0] - arr[1]);
 
             Array.Sort(arr);
 
             for (int i = 0; i < arr.Length - 1; i++)
             {
-                diff = Math.Abs(arr[i] - arr[i + 1]);
+                int diff = Math.Abs(arr[i] - arr[i + 1]);
 
                 if (diff < minDiff)
                 {
@@ -35,7 +28,7 @@ namespace Interview_Preparation_Kit.Greedy_Algorithms.Minimum_Absolute_Differenc
             int n = Convert.ToInt32(Console.ReadLine());
 
             int[] arr = Array.ConvertAll(Console.ReadLine().Split(' '), arrTemp => Convert.ToInt32(arrTemp));
-            int result = minimumAbsoluteDifference(arr);
+            int result = MinimumAbsoluteDifference(arr);
 
             Console.WriteLine(result);
 

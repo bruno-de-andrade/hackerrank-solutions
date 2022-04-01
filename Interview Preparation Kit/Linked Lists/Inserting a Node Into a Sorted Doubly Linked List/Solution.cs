@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Interview_Preparation_Kit.Linked_Lists.Inserting_a_Node_Into_a_Sorted_Doubly_Linked_List
+﻿namespace InterviewPreparationKit.LinkedLists.InsertingNodeIntoSortedDoublyLinkedList
 {
     class Solution
     {
@@ -12,9 +10,9 @@ namespace Interview_Preparation_Kit.Linked_Lists.Inserting_a_Node_Into_a_Sorted_
 
             public DoublyLinkedListNode(int nodeData)
             {
-                this.data = nodeData;
-                this.next = null;
-                this.prev = null;
+                data = nodeData;
+                next = null;
+                prev = null;
             }
         }
 
@@ -25,25 +23,25 @@ namespace Interview_Preparation_Kit.Linked_Lists.Inserting_a_Node_Into_a_Sorted_
 
             public DoublyLinkedList()
             {
-                this.head = null;
-                this.tail = null;
+                head = null;
+                tail = null;
             }
 
             public void InsertNode(int nodeData)
             {
                 DoublyLinkedListNode node = new DoublyLinkedListNode(nodeData);
 
-                if (this.head == null)
+                if (head == null)
                 {
-                    this.head = node;
+                    head = node;
                 }
                 else
                 {
-                    this.tail.next = node;
-                    node.prev = this.tail;
+                    tail.next = node;
+                    node.prev = tail;
                 }
 
-                this.tail = node;
+                tail = node;
             }
         }
 
@@ -62,7 +60,7 @@ namespace Interview_Preparation_Kit.Linked_Lists.Inserting_a_Node_Into_a_Sorted_
             }
         }
 
-        static DoublyLinkedListNode sortedInsert(DoublyLinkedListNode head, int data)
+        static DoublyLinkedListNode SortedInsert(DoublyLinkedListNode head, int data)
         {
             if (head == null)
             {
@@ -89,9 +87,11 @@ namespace Interview_Preparation_Kit.Linked_Lists.Inserting_a_Node_Into_a_Sorted_
 
             // Insert and update links
             var prevNode = currentNode.prev;
-            var newNode = new DoublyLinkedListNode(data);
-            newNode.next = currentNode;
-            newNode.prev = prevNode;
+            var newNode = new DoublyLinkedListNode(data)
+            {
+                next = currentNode,
+                prev = prevNode
+            };
             currentNode.prev = newNode;
 
             if (prevNode == null)
@@ -123,7 +123,7 @@ namespace Interview_Preparation_Kit.Linked_Lists.Inserting_a_Node_Into_a_Sorted_
 
                 int data = Convert.ToInt32(Console.ReadLine());
 
-                DoublyLinkedListNode llist1 = sortedInsert(llist.head, data);
+                DoublyLinkedListNode llist1 = SortedInsert(llist.head, data);
 
                 PrintDoublyLinkedList(llist1, " ");
                 Console.WriteLine();

@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 
-namespace Interview_Preparation_Kit.Recursion_and_Backtracking.Recursive_Digit_Sum
+namespace InterviewPreparationKit.RecursionAndBacktracking.RecursiveDigitSum
 {
     class Solution
     {
-        static int superDigit(string number, int timesToSum)
+        static int SuperDigit(string number, int timesToSum)
         {
             if (number.Length == 1)
                 return Convert.ToInt32(number);
@@ -20,7 +18,7 @@ namespace Interview_Preparation_Kit.Recursion_and_Backtracking.Recursive_Digit_S
 
             sum *= timesToSum;
 
-            return superDigit(sum.ToString(), 1);
+            return SuperDigit(sum.ToString(), 1);
         }
 
         static void Main(string[] args)
@@ -35,7 +33,7 @@ namespace Interview_Preparation_Kit.Recursion_and_Backtracking.Recursive_Digit_S
 
             int k = Convert.ToInt32(nk[1]);
 
-            int result = superDigit(n, k);
+            int result = SuperDigit(n, k);
 
             watch.Stop();
 

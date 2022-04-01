@@ -1,11 +1,9 @@
-﻿using System;
-
-namespace Interview_Preparation_Kit.Dynamic_Programming.Candies
+﻿namespace InterviewPreparationKit.DynamicProgramming.Candies
 {
-    internal class Solution
+    class Solution
     {
         // Complete the candies function below.
-        private static long candies(int n, int[] arr)
+        private static long Candies(int n, int[] arr)
         {
             long[] arrAmounts = new long[arr.Length];
             long totalAmount = 0;
@@ -44,7 +42,7 @@ namespace Interview_Preparation_Kit.Dynamic_Programming.Candies
                 arr[i] = arrItem;
             }
 
-            long result = candies(n, arr);
+            long result = Candies(n, arr);
 
             Console.WriteLine(result);
 

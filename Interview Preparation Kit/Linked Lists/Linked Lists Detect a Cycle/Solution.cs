@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace Interview_Preparation_Kit.Linked_Lists.Linked_Lists_Detect_a_Cycle
+﻿namespace InterviewPreparationKit.LinkedLists.LinkedListsDetectCycle
 {
     class Solution
     {
@@ -11,8 +9,8 @@ namespace Interview_Preparation_Kit.Linked_Lists.Linked_Lists_Detect_a_Cycle
 
             public SinglyLinkedListNode(int nodeData)
             {
-                this.data = nodeData;
-                this.next = null;
+                data = nodeData;
+                next = null;
             }
         }
 
@@ -23,28 +21,28 @@ namespace Interview_Preparation_Kit.Linked_Lists.Linked_Lists_Detect_a_Cycle
 
             public SinglyLinkedList()
             {
-                this.head = null;
-                this.tail = null;
+                head = null;
+                tail = null;
             }
 
             public void InsertNode(int nodeData)
             {
                 SinglyLinkedListNode node = new SinglyLinkedListNode(nodeData);
 
-                if (this.head == null)
+                if (head == null)
                 {
-                    this.head = node;
+                    head = node;
                 }
                 else
                 {
-                    this.tail.next = node;
+                    tail.next = node;
                 }
 
-                this.tail = node;
+                tail = node;
             }
         }
 
-        bool hasCycle(SinglyLinkedListNode head)
+        bool HasCycle(SinglyLinkedListNode head)
         {
             var visitedNodes = new HashSet<SinglyLinkedListNode>();
             var currentNode = head;

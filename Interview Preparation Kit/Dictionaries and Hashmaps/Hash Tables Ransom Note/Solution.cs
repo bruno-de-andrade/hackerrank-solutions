@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 
-namespace Interview_Preparation_Kit.Dictionaries_and_Hashmaps.Hash_Tables_Ransom_Note
+namespace InterviewPreparationKit.DictionariesAndHashmaps.HashTablesRansomNote
 {
-    internal class Solution
+    class Solution
     {
-        private static void checkMagazine(string[] magazine, string[] note)
+        private static void CheckMagazine(string[] magazine, string[] note)
         {
             var magazineDict = new Dictionary<string, int>();
 
@@ -55,7 +53,7 @@ namespace Interview_Preparation_Kit.Dictionaries_and_Hashmaps.Hash_Tables_Ransom
 
             var watch = Stopwatch.StartNew();
 
-            checkMagazine(magazine, note);
+            CheckMagazine(magazine, note);
 
             watch.Stop();
 

@@ -1,9 +1,8 @@
-﻿using System;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 
-namespace Interview_Preparation_Kit.Recursion_and_Backtracking.Recursion_Fibonacci_Numbers
+namespace InterviewPreparationKit.RecursionAndBacktracking.RecursionFibonacciNumbers
 {
-    internal class Solution
+    class Solution
     {
         static int maxIndex;
         static int curIndex;

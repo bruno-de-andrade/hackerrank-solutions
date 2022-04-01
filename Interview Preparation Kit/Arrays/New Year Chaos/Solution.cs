@@ -1,12 +1,11 @@
-﻿using System;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 
-namespace Interview_Preparation_Kit.Arrays.New_Year_Chaos
+namespace InterviewPreparationKit.Arrays.NewYearChaos
 {
-    internal class Solution
+    class Solution
     {
         // Complete the minimumBribes function below.
-        private static void minimumBribes(int[] q)
+        private static void MinimumBribes(int[] q)
         {
             int sumBribes = 0,
                 aux = 0;
@@ -54,7 +53,7 @@ namespace Interview_Preparation_Kit.Arrays.New_Year_Chaos
 
                 var watch = Stopwatch.StartNew();
 
-                minimumBribes(q);
+                MinimumBribes(q);
 
                 watch.Stop();
 

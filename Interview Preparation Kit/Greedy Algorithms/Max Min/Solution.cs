@@ -1,21 +1,16 @@
-﻿using System;
-
-namespace Interview_Preparation_Kit.Greedy_Algorithms.Max_Min
+﻿namespace InterviewPreparationKit.GreedyAlgorithms.MaxMin
 {
-    internal class Solution
+    class Solution
     {
         // Complete the maxMin function below.
-        private static int maxMin(int k, int[] arr)
+        private static int MaxMin(int k, int[] arr)
         {
             Array.Sort(arr);
-
-            int minUnfairness = arr[k - 1] - arr[0],
-                currentUnfairness = 0;
+            int minUnfairness = arr[k - 1] - arr[0];
 
             for (int index = 1; index + k - 1 < arr.Length; index++)
             {
-                currentUnfairness = arr[index + k - 1] - arr[index];
-
+                int currentUnfairness = arr[index + k - 1] - arr[index];
                 if (currentUnfairness < minUnfairness)
                 {
                     minUnfairness = currentUnfairness;
@@ -39,7 +34,7 @@ namespace Interview_Preparation_Kit.Greedy_Algorithms.Max_Min
                 arr[i] = arrItem;
             }
 
-            int result = maxMin(k, arr);
+            int result = MaxMin(k, arr);
 
             Console.WriteLine(result);
 

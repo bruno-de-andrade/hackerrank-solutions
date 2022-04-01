@@ -1,13 +1,11 @@
-﻿using System;
-using System.Diagnostics;
-using System.Linq;
+﻿using System.Diagnostics;
 
-namespace Interview_Preparation_Kit.Search.Triple_Sum
+namespace InterviewPreparationKit.Search.TripleSum
 {
-    internal class Solution
+    class Solution
     {
         // Complete the triplets function below.
-        private static long triplets(int[] a, int[] b, int[] c)
+        private static long Triplets(int[] a, int[] b, int[] c)
         {
             Array.Sort(a);
             Array.Sort(b);
@@ -63,7 +61,7 @@ namespace Interview_Preparation_Kit.Search.Triple_Sum
 
             var watch = Stopwatch.StartNew();
 
-            long ans = triplets(arra, arrb, arrc);
+            long ans = Triplets(arra, arrb, arrc);
 
             watch.Stop();
 

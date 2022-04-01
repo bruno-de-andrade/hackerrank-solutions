@@ -1,21 +1,19 @@
-﻿using System;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 
-namespace Interview_Preparation_Kit.Greedy_Algorithms.Greedy_Florist
+namespace InterviewPreparationKit.GreedyAlgorithms.Greedy_Florist
 {
-    internal class Solution
+    class Solution
     {
         // Complete the getMinimumCost function below.
-        private static int getMinimumCost(int k, int[] c)
+        private static int GetMinimumCost(int k, int[] c)
         {
-            int minCost = 0,
-                previousPurchases = 0;
+            int minCost = 0;
 
             Array.Sort(c);
 
             for (int index = c.Length - 1; index >= 0; index--)
             {
-                previousPurchases = (c.Length - (index + 1)) / k;
+                int previousPurchases = (c.Length - (index + 1)) / k;
                 minCost += (previousPurchases + 1) * c[index];
             }
 
@@ -34,7 +32,7 @@ namespace Interview_Preparation_Kit.Greedy_Algorithms.Greedy_Florist
 
             var watch = Stopwatch.StartNew();
 
-            int minimumCost = getMinimumCost(k, c);
+            int minimumCost = GetMinimumCost(k, c);
 
             watch.Stop();
 

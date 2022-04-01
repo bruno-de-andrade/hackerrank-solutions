@@ -1,30 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Diagnostics;
 
-namespace Interview_Preparation_Kit.String_Manipulation.Strings_Making_Anagrams
+namespace InterviewPreparationKit.StringManipulation.StringsMakingAnagrams
 {
     class Solution
     {
-        static int makeAnagram(string a, string b)
+        static int MakeAnagram(string a, string b)
         {
-            var dicA = initializeDictionary(a);
-            var dicB = initializeDictionary(b);
+            var dicA = InitializeDictionary(a);
+            var dicB = InitializeDictionary(b);
 
             if (dicA.Count > dicB.Count)
             {
-                return countDifferences(dicA, dicB);
+                return CountDifferences(dicA, dicB);
             }
             else
             {
-                return countDifferences(dicB, dicA);
+                return CountDifferences(dicB, dicA);
             }
         }
 
-        static Dictionary<char, int> initializeDictionary(string word)
+        static Dictionary<char, int> InitializeDictionary(string word)
         {
             var countCharacters = new Dictionary<char, int>();
 
@@ -43,7 +38,7 @@ namespace Interview_Preparation_Kit.String_Manipulation.Strings_Making_Anagrams
             return countCharacters;
         }
 
-        static int countDifferences(Dictionary<char, int> dicA, Dictionary<char, int> dicB)
+        static int CountDifferences(Dictionary<char, int> dicA, Dictionary<char, int> dicB)
         {
             int countDifferences = 0;
 
@@ -78,7 +73,7 @@ namespace Interview_Preparation_Kit.String_Manipulation.Strings_Making_Anagrams
 
             var watch = Stopwatch.StartNew();
 
-            int res = makeAnagram(a, b);
+            int res = MakeAnagram(a, b);
 
             watch.Stop();
 

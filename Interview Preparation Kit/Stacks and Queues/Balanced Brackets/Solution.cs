@@ -1,19 +1,17 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 
-namespace Interview_Preparation_Kit.Stacks_and_Queues.Balanced_Brackets
+namespace InterviewPreparationKit.StacksAndQueues.BalancedBrackets
 {
     class Solution
     {
-        static Dictionary<char, char> brackets = new Dictionary<char, char> {
+        static readonly Dictionary<char, char> brackets = new Dictionary<char, char> {
             { ')', '(' },
             { ']', '[' },
             { '}', '{' }
         };
         static Stack stack;
 
-        static string isBalanced(string s)
+        static string IsBalanced(string s)
         {
             stack = new Stack();
 
@@ -43,7 +41,7 @@ namespace Interview_Preparation_Kit.Stacks_and_Queues.Balanced_Brackets
             {
                 string s = Console.ReadLine();
 
-                string result = isBalanced(s);
+                string result = IsBalanced(s);
 
                 Console.WriteLine(result);
             }

@@ -1,11 +1,10 @@
-﻿using System;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 
-namespace Interview_Preparation_Kit.Arrays.Arrays_Left_Rotation
+namespace InterviewPreparationKit.Arrays.ArraysLeftRotation
 {
-    internal class Solution
+    class Solution
     {
-        private static int[] rotLeft(int[] a, int d)
+        private static int[] RotateLeft(int[] a, int d)
         {
             for (int rotationIndex = 0; rotationIndex < d; rotationIndex++)
             {
@@ -31,7 +30,7 @@ namespace Interview_Preparation_Kit.Arrays.Arrays_Left_Rotation
 
             var watch = Stopwatch.StartNew();
 
-            int[] result = rotLeft(a, d);
+            int[] result = RotateLeft(a, d);
 
             watch.Stop();
 

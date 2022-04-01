@@ -1,21 +1,20 @@
-﻿using System;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 
-namespace Interview_Preparation_Kit.Miscellaneous.Time_Complexity_Primality
+namespace InterviewPreparationKit.Miscellaneous.TimeComplexityPrimality
 {
     class Solution
     {
         const string IsPrime = "Prime";
         const string IsNotPrime = "Not prime";
 
-        static string primality(int number)
+        static string Primality(int number)
         {
             // 2 is the only even prime number
             if (number == 2)
                 return IsPrime;
 
             // If number is even or sum of digits is multiple of 3, number is not prime
-            if (number < 2 || number % 2 == 0 || getDigitsSum(number) % 3 == 0)
+            if (number < 2 || number % 2 == 0 || GetDigitsSum(number) % 3 == 0)
                 return IsNotPrime;
 
             int maxNumberToCheck = (int)Math.Sqrt(number); // Check all numbers up to the square root of the number to evaluate
@@ -29,7 +28,7 @@ namespace Interview_Preparation_Kit.Miscellaneous.Time_Complexity_Primality
             return IsPrime;
         }
 
-        static int getDigitsSum(int number)
+        static int GetDigitsSum(int number)
         {
             string numberToString = number.ToString();
             int sum = 0;
@@ -52,7 +51,7 @@ namespace Interview_Preparation_Kit.Miscellaneous.Time_Complexity_Primality
 
                 var watch = Stopwatch.StartNew();
 
-                string result = primality(n);
+                string result = Primality(n);
 
                 watch.Stop();
 

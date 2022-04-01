@@ -1,20 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Diagnostics;
 
-namespace Interview_Preparation_Kit.Warm_up_Challenges.Repeated_String
+namespace InterviewPreparationKit.WarmUpChallenges.RepeatedString
 {
     class Solution
     {
         // Complete the repeatedString function below.
-        static long repeatedString(string s, long n)
+        static long RepeatedString(string s, long n)
         {
-            long countEachString = 0,
-                 countRepeatString = 0,
-                 countTotal = 0;
+            long countEachString = 0;
 
             //Find amount of 'a' in a loop through the string
             for (int index = 0; index < s.Length; index++)
@@ -31,11 +24,11 @@ namespace Interview_Preparation_Kit.Warm_up_Challenges.Repeated_String
             }
 
             //Calculate how many times the string must be repeated
-            countRepeatString = (long)n / s.Length;
-            countTotal = countEachString * countRepeatString;
+            long countRepeatString = n / s.Length;
+            long countTotal = countEachString * countRepeatString;
 
             //Sum the remaining
-            n = n - s.Length * countRepeatString;
+            n -= s.Length * countRepeatString;
 
             for (int index = 0; index < n; index++)
             {
@@ -56,7 +49,7 @@ namespace Interview_Preparation_Kit.Warm_up_Challenges.Repeated_String
 
             var watch = Stopwatch.StartNew();
 
-            long result = repeatedString(s, n);
+            long result = RepeatedString(s, n);
 
             watch.Stop();
 

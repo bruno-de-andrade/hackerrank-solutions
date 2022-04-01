@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 
-namespace Interview_Preparation_Kit.Dictionaries_and_Hashmaps.Two_Strings
+namespace InterviewPreparationKit.DictionariesAndHashmaps.TwoStrings
 {
-    internal class Solution
+    class Solution
     {
-        private static string twoStrings(string s1, string s2)
+        private static string TwoStrings(string s1, string s2)
         {
             var dicS1 = new Dictionary<string, int>();
 
@@ -37,7 +35,7 @@ namespace Interview_Preparation_Kit.Dictionaries_and_Hashmaps.Two_Strings
 
                 var watch = Stopwatch.StartNew();
 
-                string result = twoStrings(s1, s2);
+                string result = TwoStrings(s1, s2);
 
                 watch.Stop();
 

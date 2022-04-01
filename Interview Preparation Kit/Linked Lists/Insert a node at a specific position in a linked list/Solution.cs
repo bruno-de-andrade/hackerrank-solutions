@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Interview_Preparation_Kit.Linked_Lists.Insert_a_node_at_a_specific_position_in_a_linked_list
+﻿namespace InterviewPreparationKit.LinkedLists.InsertNodeAtSpecificPositionInLinkedList
 {
     class Solution
     {
@@ -11,8 +9,8 @@ namespace Interview_Preparation_Kit.Linked_Lists.Insert_a_node_at_a_specific_pos
 
             public SinglyLinkedListNode(int nodeData)
             {
-                this.data = nodeData;
-                this.next = null;
+                data = nodeData;
+                next = null;
             }
         }
 
@@ -23,24 +21,24 @@ namespace Interview_Preparation_Kit.Linked_Lists.Insert_a_node_at_a_specific_pos
 
             public SinglyLinkedList()
             {
-                this.head = null;
-                this.tail = null;
+                head = null;
+                tail = null;
             }
 
             public void InsertNode(int nodeData)
             {
                 SinglyLinkedListNode node = new SinglyLinkedListNode(nodeData);
 
-                if (this.head == null)
+                if (head == null)
                 {
-                    this.head = node;
+                    head = node;
                 }
                 else
                 {
-                    this.tail.next = node;
+                    tail.next = node;
                 }
 
-                this.tail = node;
+                tail = node;
             }
         }
 
@@ -59,7 +57,7 @@ namespace Interview_Preparation_Kit.Linked_Lists.Insert_a_node_at_a_specific_pos
             }
         }
 
-        static SinglyLinkedListNode insertNodeAtPosition(SinglyLinkedListNode head, int data, int position)
+        static SinglyLinkedListNode InsertNodeAtPosition(SinglyLinkedListNode head, int data, int position)
         {
             var currentNode = head;
             int index = 0;
@@ -71,8 +69,10 @@ namespace Interview_Preparation_Kit.Linked_Lists.Insert_a_node_at_a_specific_pos
             }
 
             // Insert new node and fix links
-            var newNode = new SinglyLinkedListNode(data);
-            newNode.next = currentNode.next;
+            var newNode = new SinglyLinkedListNode(data)
+            {
+                next = currentNode.next
+            };
             currentNode.next = newNode;
 
             return head;
@@ -94,7 +94,7 @@ namespace Interview_Preparation_Kit.Linked_Lists.Insert_a_node_at_a_specific_pos
 
             int position = Convert.ToInt32(Console.ReadLine());
 
-            SinglyLinkedListNode llist_head = insertNodeAtPosition(llist.head, data, position);
+            SinglyLinkedListNode llist_head = InsertNodeAtPosition(llist.head, data, position);
 
             PrintSinglyLinkedList(llist_head, " ");
 

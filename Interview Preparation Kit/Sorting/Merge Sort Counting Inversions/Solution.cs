@@ -1,20 +1,19 @@
-﻿using System;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 
-namespace Interview_Preparation_Kit.Sorting.Merge_Sort_Counting_Inversions
+namespace InterviewPreparationKit.Sorting.MergeSortCountingInversions
 {
-    internal class Solution
+    class Solution
     {
         //// Complete the countInversions function below.
-        private static long countInversions(int[] arr)
+        private static long CountInversions(int[] arr)
         {
             long countSwaps = 0;
 
-            mergeSort(arr, ref countSwaps);
+            MergeSort(arr, ref countSwaps);
 
             return countSwaps;
         }
-        private static int[] mergeSort(int[] array, ref long countSwaps)
+        private static int[] MergeSort(int[] array, ref long countSwaps)
         {
             if (array.Length == 1)
             {
@@ -27,13 +26,13 @@ namespace Interview_Preparation_Kit.Sorting.Merge_Sort_Counting_Inversions
             Array.Copy(array, 0, arrayLeft, 0, arrayLeft.Length);
             Array.Copy(array, arrayLeft.Length, arrayRight, 0, arrayRight.Length);
 
-            arrayLeft = mergeSort(arrayLeft, ref countSwaps);
-            arrayRight = mergeSort(arrayRight, ref countSwaps);
+            arrayLeft = MergeSort(arrayLeft, ref countSwaps);
+            arrayRight = MergeSort(arrayRight, ref countSwaps);
 
-            return merge(arrayLeft, arrayRight, ref countSwaps);
+            return Merge(arrayLeft, arrayRight, ref countSwaps);
         }
 
-        private static int[] merge(int[] arrayLeft, int[] arrayRight, ref long countSwaps)
+        private static int[] Merge(int[] arrayLeft, int[] arrayRight, ref long countSwaps)
         {
             int[] merged = new int[arrayLeft.Length + arrayRight.Length];
             int leftIndex = 0, rightIndex = 0, mergedIndex = 0;
@@ -80,7 +79,7 @@ namespace Interview_Preparation_Kit.Sorting.Merge_Sort_Counting_Inversions
                 int n = Convert.ToInt32(Console.ReadLine());
 
                 int[] arr = Array.ConvertAll(Console.ReadLine().Split(' '), arrTemp => Convert.ToInt32(arrTemp));
-                long result = countInversions(arr);
+                long result = CountInversions(arr);
 
                 Console.WriteLine(result);
             }

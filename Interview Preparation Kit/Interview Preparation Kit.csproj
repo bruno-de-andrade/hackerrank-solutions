@@ -1,155 +1,31 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4BD03DD4-894E-43B4-A43D-645AA7B378F1}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Interview_Preparation_Kit</RootNamespace>
-    <AssemblyName>Interview Preparation Kit</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <PublishUrl>publish\</PublishUrl>
-    <Install>true</Install>
-    <InstallFrom>Disk</InstallFrom>
-    <UpdateEnabled>false</UpdateEnabled>
-    <UpdateMode>Foreground</UpdateMode>
-    <UpdateInterval>7</UpdateInterval>
-    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
-    <UpdatePeriodically>false</UpdatePeriodically>
-    <UpdateRequired>false</UpdateRequired>
-    <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
-    <UseApplicationTrust>false</UseApplicationTrust>
-    <BootstrapperEnabled>true</BootstrapperEnabled>
-    <TargetFrameworkProfile />
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <StartupObject>Interview_Preparation_Kit.Arrays._2D_Array___DS.Solution</StartupObject>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject>Interview_Preparation_Kit.Dynamic_Programming.Decibinary_Numbers.Solution2</StartupObject>
-  </PropertyGroup>
+
   <ItemGroup>
-    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.2.0.0\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
-    </Reference>
-    <Reference Include="MiniProfiler, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b44f9351044011a3, processorArchitecture=MSIL">
-      <HintPath>..\packages\MiniProfiler.4.1.0\lib\net461\MiniProfiler.dll</HintPath>
-    </Reference>
-    <Reference Include="MiniProfiler.Shared, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b44f9351044011a3, processorArchitecture=MSIL">
-      <HintPath>..\packages\MiniProfiler.Shared.4.1.0\lib\net461\MiniProfiler.Shared.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.Linq" />
-    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.2.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.4.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime.Caching" />
-    <Reference Include="System.Transactions" />
-    <Reference Include="System.Web" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Xml" />
+    <None Remove="Dynamic Programming\Abbreviation\testCase1.txt" />
+    <None Remove="Dynamic Programming\Decibinary Numbers\testCase1.txt" />
+    <None Remove="Dynamic Programming\Decibinary Numbers\testCase2.txt" />
+    <None Remove="Dynamic Programming\Decibinary Numbers\testCase5.txt" />
+    <None Remove="Dynamic Programming\Decibinary Numbers\testCase6.txt" />
+    <None Remove="Dynamic Programming\Decibinary Numbers\testCase7.txt" />
+    <None Remove="Dynamic Programming\Decibinary Numbers\testCase8.txt" />
+    <None Remove="Linked Lists\Find Merge Point of Two Lists\testCase1.txt" />
+    <None Remove="Linked Lists\Linked Lists Detect a Cycle\Solution.java.txt" />
+    <None Remove="Miscellaneous\Flipping bits\Solution.js" />
+    <None Remove="Recursion and Backtracking\Crossword Puzzle\testCase1.txt" />
+    <None Remove="Recursion and Backtracking\Recursion Davis Staircase\testCase1.txt" />
+    <None Remove="Recursion and Backtracking\Recursive Digit Sum\testCase1.txt" />
+    <None Remove="Search\Hash Tables Ice Cream Parlor\testCase1.txt" />
+    <None Remove="Search\Swap Nodes [Algo]\testCase1.txt" />
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Arrays\2D Array - DS\Solution.cs" />
-    <Compile Include="Arrays\Array Manipulation\Solution.cs" />
-    <Compile Include="Arrays\Arrays Left Rotation\Solution.cs" />
-    <Compile Include="Arrays\Minimum Swaps 2\Solution.cs" />
-    <Compile Include="Arrays\New Year Chaos\Solution.cs" />
-    <Compile Include="Dictionaries and Hashmaps\Count Triplets\Solution.cs" />
-    <Compile Include="Dictionaries and Hashmaps\Frequency Queries\Solution.cs" />
-    <Compile Include="Dictionaries and Hashmaps\Hash Tables Ransom Note\Solution.cs" />
-    <Compile Include="Dictionaries and Hashmaps\Sherlock and Anagrams\Solution.cs" />
-    <Compile Include="Dictionaries and Hashmaps\Two Strings\Solution.cs" />
-    <Compile Include="Dynamic Programming\Abbreviation\Solution.cs" />
-    <Compile Include="Dynamic Programming\Candies\Solution.cs" />
-    <Compile Include="Dynamic Programming\Decibinary Numbers\Solution.cs" />
-    <Compile Include="Dynamic Programming\Max Array Sum\Solution.cs" />
-    <Compile Include="Greedy Algorithms\Greedy Florist\Solution.cs" />
-    <Compile Include="Greedy Algorithms\Luck Balance\Solution.cs" />
-    <Compile Include="Greedy Algorithms\Max Min\Solution.cs" />
-    <Compile Include="Greedy Algorithms\Minimum Absolute Difference in an Array\Solution.cs" />
-    <Compile Include="Greedy Algorithms\Reverse Shuffle Merge\Solution.cs" />
-    <Compile Include="Linked Lists\Find Merge Point of Two Lists\Solution.cs" />
-    <Compile Include="Linked Lists\Insert a node at a specific position in a linked list\Solution.cs" />
-    <Compile Include="Linked Lists\Inserting a Node Into a Sorted Doubly Linked List\Solution.cs" />
-    <Compile Include="Linked Lists\Linked Lists Detect a Cycle\Solution.cs" />
-    <Compile Include="Linked Lists\Reverse a doubly linked list\Solution.cs" />
-    <Compile Include="Miscellaneous\Time Complexity Primality\Solution.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Recursion and Backtracking\Crossword Puzzle\Solution.cs" />
-    <Compile Include="Recursion and Backtracking\Recursion Davis Staircase\Solution.cs" />
-    <Compile Include="Recursion and Backtracking\Recursive Digit Sum\Solution.cs" />
-    <Compile Include="Search\Hash Tables Ice Cream Parlor\Solution.cs" />
-    <Compile Include="Search\Minimum Time Required\Solution.cs" />
-    <Compile Include="Search\Pairs\Solution.cs" />
-    <Compile Include="Recursion and Backtracking\Recursion Fibonacci Numbers\Solution.cs" />
-    <Compile Include="Recursion and Backtracking\Recursion Fibonacci Numbers\SolutionTabulation.cs" />
-    <Compile Include="Recursion and Backtracking\Recursion Fibonacci Numbers\SolutionMemoization.cs" />
-    <Compile Include="Search\Swap Nodes [Algo]\Solution.cs" />
-    <Compile Include="Search\Triple Sum\Solution.cs" />
-    <Compile Include="Sorting\Fraudulent Activity Notifications\Solution.cs" />
-    <Compile Include="Sorting\Mark and Toys\Solution.cs" />
-    <Compile Include="Sorting\Merge Sort Counting Inversions\Solution.cs" />
-    <Compile Include="Sorting\Sorting Bubble Sort\Solution.cs" />
-    <Compile Include="Sorting\Sorting Comparator\Solution.cs" />
-    <Compile Include="Stacks and Queues\Balanced Brackets\Solution.cs" />
-    <Compile Include="String Manipulation\Alternating Characters\Solution.cs" />
-    <Compile Include="String Manipulation\Common Child\Solution.cs" />
-    <Compile Include="String Manipulation\Sherlock and the Valid String\Solution.cs" />
-    <Compile Include="String Manipulation\Special Palindrome Again\Solution.cs" />
-    <Compile Include="String Manipulation\Strings Making Anagrams\Solution.cs" />
-    <Compile Include="Trees\Tree Height of a Binary Tree\Solution.cs" />
-    <Compile Include="Warm-up Challenges\Counting Valleys\Solution.cs" />
-    <Compile Include="Warm-up Challenges\Jumping on the Clouds\Solution.cs" />
-    <Compile Include="Warm-up Challenges\Repeated String\Solution.cs" />
-    <Compile Include="Warm-up Challenges\Sock Merchant\Solution.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
-      <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
-  </ItemGroup>
+
   <ItemGroup>
     <Content Include="Dynamic Programming\Abbreviation\testCase1.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -193,6 +69,5 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-  <ItemGroup />
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+
 </Project>
